@@ -1,0 +1,141 @@
+import React, { useEffect, useState } from "react";
+import logo from "../../../assets/images/oz_logo.png";
+import { Link } from "react-router-dom";
+import classNames from "classnames";
+import "../style.css";
+import AnimatedToggleIcon from "../../AmimatedToggleIcon";
+import { HiMenuAlt3 } from "react-icons/hi";
+import { GiCancel } from "react-icons/gi";
+import { RxCross1 } from "react-icons/rx";
+
+const ACTIVE_COLOR = [
+  { linkColor: "#ffffff", bgColor: "#1E1E1E" },
+  { linkColor: "#ffffff", bgColor: "#FD273F" },
+  { linkColor: "#ffffff", bgColor: "#8837B9" },
+  { linkColor: "#ffffff", bgColor: "#FFE41B" },
+  { linkColor: "#ffffff", bgColor: "#7FCDFA" },
+  { linkColor: "#ffffff", bgColor: "#00CCB6" },
+  { linkColor: "#ffffff", bgColor: "#FD7B41" },
+  { linkColor: "#ffffff", bgColor: "#CFBBF7" },
+];
+
+const Header = () => {
+  const [open, setOpen] = useState(false);
+  const [activeColor, setActiveColor] = useState(0);
+
+  useEffect(() => {
+    if (open) {
+      document.body.style.overflowY = "hidden";
+    } else {
+      document.body.style.overflowY = "auto";
+    }
+
+    return () => {
+      document.body.style.overflowY = "auto";
+    };
+  }, [open]);
+
+  useEffect(() => {
+    if (open) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [open]);
+
+  const navLinks = [
+    { id: 1, path: "/", label: "Home" },
+    { id: 2, path: "/about", label: "About Us" },
+    { id: 3, path: "/about", label: "Our Team" },
+    { id: 4, path: "/it-services", label: "It Services" },
+    { id: 5, path: "/it-services", label: "Digital Marketing" },
+    { id: 6, path: "/it-services", label: "Clients" },
+    { id: 7, path: "/contact", label: "Contact Us" },
+  ];
+
+  return (
+    <>
+      <div className="bg-transparent p-4 px-28 flex justify-between items-center relative z-50">
+        <Link to="./">
+          <img src={logo} className="h-18 object-cover" alt="Logo" />
+        </Link>
+
+        {/* <div
+          onClick={() => setOpen(!open)}
+          className={classNames(
+            "hamburger flex flex-col justify-between w-8 h-6 cursor-pointer",
+            { open }
+          )}
+        >
+          <span className="block h-1 w-8 bg-white rounded transition-all duration-300"></span>
+          <span className="block h-1 w-8 bg-white rounded transition-all duration-300"></span>
+          <span className="block h-1 w-8 bg-white rounded transition-all duration-300"></span>
+        </div> */}
+
+        <AnimatedToggleIcon
+          closeIcon={<HiMenuAlt3 />}
+          openIcon={<RxCross1 />}
+          openColor="text-white"
+          closeColor="text-white"
+          isOpen={open}
+          onClick={() => setOpen(!open)}
+          size="text-6xl"
+          className="font-bold"
+        />
+      </div>
+
+      {/* Full-screen sliding menu */}
+      <div
+        style={{
+          color: ACTIVE_COLOR[activeColor].linkColor,
+          backgroundColor: ACTIVE_COLOR[activeColor].bgColor,
+        }}
+        className={classNames(
+          "fixed top-0 left-0 w-full h-full flex flex-col items-center justify-center z-40 p-40 ",
+          "transition-all duration-500 ease-in-out",
+          {
+            "translate-y-0": open,
+            "-translate-y-full": !open,
+          }
+        )}
+      >
+        <div className="w-full">
+          <div className="w-1/2  sm:w-full">
+            <ul className="text-2xl sm:text-4xl md:text-5xl lg:text-[3.5em] font-bold space-y-6 ">
+              {navLinks.map((item) => (
+                <li
+                  className="transition-transform duration-300 ease-in-out hover:scale-[1.01] cursor-pointer"
+                  key={item.id}
+                >
+                  <Link
+                    className="hover:text-black"
+                    onMouseEnter={() => {
+                      setActiveColor(item.id);
+                    }}
+                    onMouseOut={() => {
+                      setActiveColor(0);
+                    }}
+                    to={item.path}
+                    onClick={() => setOpen(false)}
+                  >
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="w-1/2 ">
+            <img src="" className="w-full h-full " />
+          </div>
+        </div>
+        <div className="w-full"></div>
+      </div>
+    </>
+  );
+};
+
+export default Header;
