@@ -63,7 +63,7 @@ const TagSection = () => {
   return (
     <section
       id="tagLineSection"
-      className="bg-blue-300 h-screen p-6 md:p-20 overflow-hidden"
+      className="bg-blue-300 h-full w-full overflow-hidden"
       data-scroll
       data-scroll-speed="3"
     >
@@ -71,25 +71,25 @@ const TagSection = () => {
         <img
           id="star"
           src={Flower3Icon}
-          className="h-44  absolute top-30 right-40"
+          className="h-20 md:h-44  absolute  top-[20%] right-[20%]  md:top-30 md:right-40"
         />
         <h1
           id="text1"
-          className="text-white  text-[3rem] sm:[3rem]  md:text-[4rem] lg:text-[5rem]   font-bold leading-[1.2]"
+          className="text-white  text-4xl md:text-7xl font-bold leading-[1.2]"
         >
           Let's automate the boring. <br />
           And amplify the bold.
         </h1>
         <h1f
           id="text2"
-          className="text-green-300 font-bold text-[1.5rem] sm:[2rem]  md:text-[2.5rem] lg:text-[2.7rem] mt-6"
+          className="text-green-300 font-bold text-2xl md:text-4xl mt-6"
         >
           That's the Oz Media way.
         </h1f>
         <img
           id="flower"
           src={Flower1Icon}
-          className="h-44  absolute bottom-40 left-72"
+          className=" h-20 md:h-44 absolute bottom-40 left-72"
         />
       </div>
     </section>

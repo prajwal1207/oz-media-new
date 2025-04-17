@@ -19,6 +19,16 @@ const faqs = [
     answer:
       "Easy. Just fill out our contact form, drop us a message, or schedule a quick discovery call. We’ll understand your goals, suggest a solution, and take it from there.",
   },
+  {
+    question: "What makes you different from other agencies?",
+    answer:
+      "Most agencies specialize in one thing. We bring creative strategy and smart technology together — so your brand looks amazing and runs flawlessly.",
+  },
+  {
+    question: "What tech stack and marketing tools do you specialize in?",
+    answer:
+      "We build on React, Vue, Laravel, Node.js, and cloud platforms like AWS & Azure. On the marketing side, we rock Google Ads, Meta Ads, HubSpot, SEO tools, and data analytics suites. If it moves pixels or processes data, we know it.",
+  },
 ];
 
 const FaqSection = () => {
@@ -43,7 +53,7 @@ const FaqSection = () => {
                 className="w-full flex justify-between items-center p-5 bg-white hover:bg-gray-50 transition "
                 onClick={() => toggleFAQ(index)}
               >
-                <span className="text-left text-3xl md:text-4xl text-gray-800 font-medium ">
+                <span className="text-left text-xl md:text-4xl text-gray-800 font-medium ">
                   {faq.question}
                 </span>
 
@@ -60,7 +70,7 @@ const FaqSection = () => {
               </button>
 
               <div
-                className={`transition-max-height duration-300 ease-in-out px-5 text-gray-700 text-3xl overflow-hidden bg-white/70 ${
+                className={`transition-max-height duration-300 ease-in-out px-5 text-gray-700  text-lg md:text-3xl overflow-hidden bg-white/70 ${
                   isOpen ? "max-h-40 py-4" : "max-h-0"
                 }`}
               >
