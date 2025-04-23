@@ -1,8 +1,8 @@
 import { useEffect, useRef } from "react";
-import LocomotiveScroll from "locomotive-scroll";
 import gsap from "gsap";
 import img1 from "../../assets/images/two-paperplane.png";
 import img2 from "../../assets/images/single-paperplane.png";
+import plane from "../../assets/Svg/download.svg";
 import styles from "./style.module.css";
 
 import ScrollTrigger from "gsap/ScrollTrigger";
@@ -10,38 +10,122 @@ import MotionPathPlugin from "gsap/MotionPathPlugin";
 import TagSection from "./TagSection";
 import FaqSection from "./FaqSection";
 import TestimonialsSection from "./TestimonialsSection";
+import { useGSAP } from "@gsap/react";
 
 gsap.registerPlugin(MotionPathPlugin);
 gsap.registerPlugin(ScrollTrigger);
 
 const HomePage = () => {
-  const scrollRef = useRef(null);
+  const planeRef = useRef(null);
+  const planeRef2 = useRef(null);
 
-  // useEffect(() => {
-  //   const scroll = new LocomotiveScroll({
-  //     el: scrollRef.current,
-  //     smooth: true,
-  //   });
+  useGSAP(() => {
+    const screenWidth = window.innerWidth;
 
-  //   return () => {
-  //     if (scroll) scroll.destroy();
-  //   };
-  // }, []);
+    const path = [
+      { x: 0, y: 0 },
+      { x: 200, y: 200 },
+      { x: screenWidth / 3, y: -200 },
+      { x: (2 * screenWidth) / 3, y: 200 },
+      { x: screenWidth, y: 0 },
+    ];
+    const path2 = [
+      { x: screenWidth, y: 0 },
+      { x: screenWidth / 3, y: -200 },
+      { x: 200, y: 200 },
+      { x: 0, y: 0 },
+      { x: -200, y: -200 },
+      { x: -screenWidth / 3, y: 100 },
+      { x: -(2 * screenWidth) / 3, y: -200 },
+      { x: -screenWidth, y: -10 },
+    ];
+
+    gsap.to(planeRef2.current, {
+      motionPath: {
+        path: path2,
+        curviness: 1.5,
+        autoRotate: true,
+      },
+      ease: "none",
+      scrollTrigger: {
+        trigger: "#planeSec",
+        start: "center bottom",
+        end: "top top",
+        scrub: true,
+        markers: true,
+      },
+    });
+
+    gsap.to(planeRef.current, {
+      motionPath: {
+        path,
+        curviness: 1.5,
+        autoRotate: true,
+      },
+      ease: "none",
+      scrollTrigger: {
+        trigger: "#planeSec",
+        start: "center bottom",
+        end: "top top",
+        scrub: true,
+      },
+    });
+  }, []);
 
   return (
-    <main ref={scrollRef}>
+    <main className="overflow-hidden">
       <section
-        className="bg-black h-screen pt-20 "
+        className="bg-blue h-screen pt-20 "
         data-scroll
         data-scroll-speed="1"
       >
-        <h1 className="text-black text-4xl p-10">Speed 1</h1>
+        <div className="flex flex-row w-1/2 h-full  ">
+          <div className=" w-full h-full font-bold text-white flex flex-col  justify-center gap-7 p-20 ">
+            <h1 className="text-9xl">Innovate Inspire Impact</h1>
+            <p className="text-4xl ">
+              Marketing That Moves, <br />
+              Technology That Builds, <br /> All Under One Roof.
+            </p>
+          </div>
+          <div></div>
+        </div>
       </section>
-      {/* <section
-        className="bg-red-300 h-screen "
-        data-scroll
-        data-scroll-speed="2"
-      ></section> */}
+      <section
+        id="planeSec"
+        className="bg-red-300 min-h-screen relative flex items-center justify-center overflow-visible"
+      >
+        <img
+          id="planeSvg"
+          ref={planeRef}
+          src={plane}
+          alt="plane"
+          className="h-32 md:h-64 w-auto rotate-12 -left-40 md:-left-60 absolute top-0"
+        />
+
+        <div className="absolute z-10 container px-4 sm:px-6 md:px-20 py-10 text-left flex flex-col gap-6 md:gap-10 font-bold">
+          <h1 className="text-purple text-4xl sm:text-5xl md:text-6xl lg:text-8xl leading-tight">
+            Next-Level Innovation, <br className="hidden sm:block" />
+            Next-Level Impact
+          </h1>
+          <p className="text-base sm:text-lg md:text-2xl lg:text-4xl font-normal">
+            Oz Media Planet is a powerhouse where cutting-edge technology meets
+            high-impact digital marketing. We are not just a service provider—we
+            are creators, disruptors, and growth accelerators. With expertise in
+            digital marketing and IT development, we engineer brands tFhat
+            dominate and build technology that scales. From crafting powerful
+            marketing campaigns to developing next-gen software solutions, our
+            goal is simple—to transform businesses into industry leaders.
+          </p>
+        </div>
+
+        <img
+          ref={planeRef2}
+          src={plane}
+          alt="plane"
+          className="h-24 sm:h-32 md:h-48 w-auto bottom-0 right-0 absolute rotate-[200deg]"
+        />
+      </section>
+
       <div className="h-screen p-4 md:p-20">
         <TagSection />
       </div>
