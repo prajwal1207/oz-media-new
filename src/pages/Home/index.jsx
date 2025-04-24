@@ -4,6 +4,10 @@ import img1 from "../../assets/images/two-paperplane.png";
 import img2 from "../../assets/images/single-paperplane.png";
 import plane from "../../assets/Svg/download.svg";
 import styles from "./style.module.css";
+import cover from "../../../src/assets/Group.png";
+import arrow from "../../../src/assets/Group53.png";
+import grid from "../../assets/grid.png";
+import svg from "../../assets/image.png";
 
 import ScrollTrigger from "gsap/ScrollTrigger";
 import MotionPathPlugin from "gsap/MotionPathPlugin";
@@ -107,6 +111,7 @@ const HomePage = () => {
             Next-Level Innovation, <br className="hidden sm:block" />
             Next-Level Impact
           </h1>
+
           <p className="text-base sm:text-lg md:text-2xl lg:text-4xl font-normal">
             Oz Media Planet is a powerhouse where cutting-edge technology meets
             high-impact digital marketing. We are not just a service provider—we
@@ -129,18 +134,49 @@ const HomePage = () => {
       <div className="h-screen p-4 md:p-20">
         <TagSection />
       </div>
-      <div className=" min-h-screen relative ">
-        <img src={img1} alt="" />
-        <div className="p-4 md:p-20">
-          <h2 className="text-4xl md:text-6xl text-teal font-bold text-center mb-8">
-            Got Questions? We’ve Got Real Answers.
-          </h2>
-          <FaqSection />
+      <section className="max-h-screen flex flex-col justify-center items-center font-bold px-4 sm:px-6 lg:px-8 py-10">
+        {/* Header */}
+        <div className="flex flex-col sm:flex-row gap-6 sm:gap-10 items-center text-center sm:text-left p-4">
+          <img
+            src={arrow}
+            alt="Arrow icon"
+            className="rotate-12 w-10 sm:w-14 md:w-16 lg:w-20"
+          />
+          <h1 className="text-3xl sm:text-5xl lg:text-7xl xl:text-8xl py-14">
+            OUR VALUES
+          </h1>
         </div>
-        <div className="absolute w-full bottom-0 -z-10">
-          <img src={img2} alt="" className="" />
+
+        {/* Image Section */}
+        <div className="w-full max-w-6xl px-4 sm:px-6 lg:px-8">
+          <img
+            src={cover}
+            alt="Cover Image"
+            className="w-full h-auto object-cover rounded-md "
+          />
         </div>
-      </div>
+      </section>
+
+      <section className="relative h-screen  bg-cover bg-center bg-no-repeat  py-20 px-4 sm:px-8 lg:px-16 ">
+        <img
+          src={grid} // Replace with your image path
+          alt="Background"
+          className="absolute top-0 left-0 w-full h-full object-cover z-0"
+        />
+        <div className="  ">
+          <div className="flex  text-center justify-center gap-10">
+            <h1 className="text-8xl font-bold ">Why Choose Us</h1>
+            <img src={svg} alt="" />
+          </div>
+          <p className=" text-3xl px-60 py-10">
+            At Oz Media Planet, we don't just follow trends—we create them. We
+            are a powerhouse of Digital Marketing and Information Technology
+            Development, blending strategy, creativity, and innovation to
+            transform businesses into industry leaders.
+          </p>
+        </div>
+      </section>
+
       <div
         className={`min-h-screen  my-20  p-4 lg:p-20 bg-yellow ${styles.container} `}
       >
@@ -151,6 +187,18 @@ const HomePage = () => {
           <TestimonialsSection />
         </div>
       </div>
+      <section className=" min-h-screen relative ">
+        <img src={img1} alt="" />
+        <div className="p-4 md:p-20">
+          <h2 className="text-4xl md:text-6xl text-teal font-bold text-center mb-8">
+            Got Questions? We’ve Got Real Answers.
+          </h2>
+          <FaqSection />
+        </div>
+        <div className="absolute w-full bottom-0 -z-10">
+          <img src={img2} alt="" className="" />
+        </div>
+      </section>
     </main>
   );
 };
