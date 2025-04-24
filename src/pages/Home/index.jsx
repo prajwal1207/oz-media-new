@@ -15,6 +15,8 @@ import TagSection from "./TagSection";
 import FaqSection from "./FaqSection";
 import TestimonialsSection from "./TestimonialsSection";
 import { useGSAP } from "@gsap/react";
+import OurMission from "./OurMission";
+import OurVision from "./OurVission";
 
 gsap.registerPlugin(MotionPathPlugin);
 gsap.registerPlugin(ScrollTrigger);
@@ -129,6 +131,12 @@ const HomePage = () => {
           alt="plane"
           className="h-24 sm:h-32 md:h-48 w-auto bottom-0 right-0 absolute rotate-[200deg]"
         />
+      </section>
+      <section className="h-screen">
+        <OurMission />
+      </section>
+      <section className="h-screen">
+        <OurVision />
       </section>
 
       <div className="h-screen p-4 md:p-20">
