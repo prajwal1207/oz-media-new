@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import gsap from "gsap";
 import img1 from "../../assets/images/two-paperplane.png";
 import img2 from "../../assets/images/single-paperplane.png";
@@ -9,6 +9,9 @@ import arrow from "../../../src/assets/Group53.png";
 import grid from "../../assets/grid.png";
 import svg from "../../assets/image.png";
 
+import left from "../../assets/elements/cta-bg1.png";
+import right from "../../assets/elements/cta-bg2.png";
+
 import ScrollTrigger from "gsap/ScrollTrigger";
 import MotionPathPlugin from "gsap/MotionPathPlugin";
 import TagSection from "./TagSection";
@@ -17,6 +20,7 @@ import TestimonialsSection from "./TestimonialsSection";
 import { useGSAP } from "@gsap/react";
 import OurMission from "./OurMission";
 import OurVision from "./OurVission";
+import Banner from "./Banner";
 
 gsap.registerPlugin(MotionPathPlugin);
 gsap.registerPlugin(ScrollTrigger);
@@ -80,22 +84,8 @@ const HomePage = () => {
 
   return (
     <main className="overflow-hidden">
-      <section
-        className="bg-blue h-screen pt-20 "
-        data-scroll
-        data-scroll-speed="1"
-      >
-        <div className="flex flex-row w-1/2 h-full  ">
-          <div className=" w-full h-full font-bold text-white flex flex-col  justify-center gap-7 p-20 ">
-            <h1 className="text-9xl">Innovate Inspire Impact</h1>
-            <p className="text-4xl ">
-              Marketing That Moves, <br />
-              Technology That Builds, <br /> All Under One Roof.
-            </p>
-          </div>
-          <div></div>
-        </div>
-      </section>
+      <Banner />
+
       <section
         id="planeSec"
         className="bg-red-300 min-h-screen relative flex items-center justify-center overflow-visible"
@@ -139,9 +129,9 @@ const HomePage = () => {
         <OurVision />
       </section>
 
-      <div className="h-screen p-4 md:p-20">
+      <section className="h-screen p-4 md:p-20">
         <TagSection />
-      </div>
+      </section>
       <section className="max-h-screen flex flex-col justify-center items-center font-bold px-4 sm:px-6 lg:px-8 py-10">
         {/* Header */}
         <div className="flex flex-col sm:flex-row gap-6 sm:gap-10 items-center text-center sm:text-left p-4">
@@ -173,7 +163,9 @@ const HomePage = () => {
         />
         <div className="  ">
           <div className="flex  text-center justify-center gap-10">
-            <h1 className="text-8xl font-bold ">Why Choose Us</h1>
+            <h1 className="text-8xl font-bold bg-gradient-to-r from-[#FA3594] to-[#941F58] bg-clip-text text-transparent ">
+              Why Choose Us
+            </h1>
             <img src={svg} alt="" />
           </div>
           <p className=" text-3xl px-60 py-10">
@@ -185,7 +177,7 @@ const HomePage = () => {
         </div>
       </section>
 
-      <div
+      <section
         className={`min-h-screen  my-20  p-4 lg:p-20 bg-yellow ${styles.container} `}
       >
         <div className="  w-full h-full rounded-[100px] ">
@@ -194,7 +186,8 @@ const HomePage = () => {
           </h2>
           <TestimonialsSection />
         </div>
-      </div>
+      </section>
+    
       <section className=" min-h-screen relative ">
         <img src={img1} alt="" />
         <div className="p-4 md:p-20">
@@ -203,10 +196,25 @@ const HomePage = () => {
           </h2>
           <FaqSection />
         </div>
+
         <div className="absolute w-full bottom-0 -z-10">
           <img src={img2} alt="" className="" />
         </div>
       </section>
+      {/* <section className="h-[30vh] mt-20 bg-[#4E2FDA] relative flex justify-center items-center flex-col ">
+        <img src={left} alt="" className="absolute top-0 right-0" />
+        <img src={right} alt="" className="absolute bottom-0 left-0" />
+
+        <h1 className="text-4xl  max-w-4xl font-bold text-white/80  text-center">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum
+        </h1>
+        <p className="text-2xl max-w-4xl">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit
+          odit ducimus optio ipsum similique nisi, officia modi totam illo
+          necessitatibus aliquid omnis et, iure vitae facilis dolorem nostrum
+          doloremque ea?
+        </p>
+      </section> */}
     </main>
   );
 };

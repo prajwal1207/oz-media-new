@@ -1,5 +1,5 @@
 import React from "react";
-import svg from "../../assets/Group.png";
+import svg from "../../assets/Group 12.png";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 

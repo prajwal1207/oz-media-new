@@ -5,8 +5,10 @@ import classNames from "classnames";
 import "../style.css";
 import AnimatedToggleIcon from "../../AmimatedToggleIcon";
 import { HiMenuAlt3 } from "react-icons/hi";
-import { GiCancel } from "react-icons/gi";
 import { RxCross1 } from "react-icons/rx";
+import { socialIcons } from "../../../assets";
+import { useScroll } from "motion/react";
+import { motion } from "framer-motion";
 
 const ACTIVE_COLOR = [
   { linkColor: "#ffffff", bgColor: "#1E1E1E" },
@@ -20,6 +22,7 @@ const ACTIVE_COLOR = [
 ];
 
 const Header = () => {
+  const { scrollYProgress } = useScroll();
   const [open, setOpen] = useState(false);
   const [activeColor, setActiveColor] = useState(0);
 
@@ -60,21 +63,23 @@ const Header = () => {
   return (
     <>
       <div className="bg-transparent p-4 px-28 flex justify-between items-center relative z-50">
+        <motion.div
+          id="scroll-indicator"
+          style={{
+            scaleX: scrollYProgress,
+            position: "fixed",
+            top: 0,
+            left: 0,
+            right: 0,
+            height: 5,
+            originX: 0,
+            backgroundColor: "#ff0088",
+          }}
+        />
+
         <Link to="./">
           <img src={logo} className="h-18 object-cover" alt="Logo" />
         </Link>
-
-        {/* <div
-          onClick={() => setOpen(!open)}
-          className={classNames(
-            "hamburger flex flex-col justify-between w-8 h-6 cursor-pointer",
-            { open }
-          )}
-        >
-          <span className="block h-1 w-8 bg-white rounded transition-all duration-300"></span>
-          <span className="block h-1 w-8 bg-white rounded transition-all duration-300"></span>
-          <span className="block h-1 w-8 bg-white rounded transition-all duration-300"></span>
-        </div> */}
 
         <AnimatedToggleIcon
           closeIcon={<HiMenuAlt3 />}
@@ -103,7 +108,7 @@ const Header = () => {
           }
         )}
       >
-        <div className="w-full">
+        <div className="w-full flex">
           <div className="w-1/2  sm:w-full">
             <ul className="text-2xl sm:text-4xl md:text-5xl lg:text-[3.5em] font-bold space-y-6 ">
               {navLinks.map((item) => (
@@ -129,10 +134,21 @@ const Header = () => {
             </ul>
           </div>
           <div className="w-1/2 ">
-            <img src="" className="w-full h-full " />
+            {/* <img src="" className="w-full h-full " /> */}
           </div>
         </div>
-        <div className="w-full"></div>
+        <div className="absolute bottom-10 right-10 flex gap-6">
+          {Object.values(socialIcons).map((icon, index) => (
+            <Link>
+              <img
+                key={index}
+                src={icon}
+                alt={`social-icon-${index}`}
+                className="filter brightness-50 hover:brightness-150 transition duration-300 cursor-pointer"
+              />
+            </Link>
+          ))}
+        </div>
       </div>
     </>
   );

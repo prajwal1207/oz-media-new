@@ -7,6 +7,9 @@ export default {
         sans: ["Inter", "sans-serif"],
         display: ["Poppins", "sans-serif"],
         handwritten: ["Pacifico", "cursive"],
+        backgroundImage: {
+          "pink-gradient": "linear-gradient(to right, #FA3594, #941F58)",
+        },
       },
       colors: {
         red: "#C32126",
@@ -36,9 +39,9 @@ export default {
         extrabold: "800",
         black: "900",
       },
-      fontSize:{
-       small:"2rem"
-      }
+      fontSize: {
+        small: "2rem",
+      },
     },
   },
   plugins: [],
