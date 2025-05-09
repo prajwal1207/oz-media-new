@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import Footer from "./Footer";
 import Header from "./header";
 
+
 function LoadingThreeDotsJumping() {
   const dotVariants = {
     jump: {

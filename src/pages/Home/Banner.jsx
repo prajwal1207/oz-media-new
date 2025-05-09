@@ -6,6 +6,9 @@ import ponga from "../../assets/elements/sound-icons1.svg";
 import gola from "../../assets/elements/Ellipse-120.png";
 import Button from "../../components/Buttons";
 import laptop from "../../assets/aeroland.png";
+import bgs from '../../../public/BG_BLACK.jpg'
+
+
 
 const Banner = () => {
   return (
@@ -16,7 +19,7 @@ const Banner = () => {
     >
       {/* Background */}
       <img
-        src={bg}
+        src={bgs}
         alt=""
         className="absolute inset-0 w-full h-full object-cover -z-10"
       />
@@ -35,7 +38,7 @@ const Banner = () => {
       <img src={gola} alt="" className="absolute top-72 animate-bounce z-10" />
 
       {/* Main Content */}
-      <div className="flex flex-col lg:flex-row items-center justify-between w-full max-w-[90vw] px-4 lg:px-0 h-full text-black/85 font-bold gap-8">
+      <div className="flex flex-col lg:flex-row items-center justify-between w-full max-w-[90vw] px-4 lg:px-0 h-full text-white font-bold gap-8">
         {/* Left Content */}
         <div className="flex-1 space-y-4 text-left md:text-center lg:text-left">
           <h1 className="text-3xl sm:text-4xl lg:text-4xl leading-tight">

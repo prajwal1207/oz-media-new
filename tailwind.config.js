@@ -4,12 +4,17 @@ export default {
   theme: {
     extend: {
       fontFamily: {
+        montserrat: ["Montserrat", "sans-serif"],
+        roboto: ["Roboto", "sans-serif"],
         sans: ["Inter", "sans-serif"],
         display: ["Poppins", "sans-serif"],
         handwritten: ["Pacifico", "cursive"],
         backgroundImage: {
           "pink-gradient": "linear-gradient(to right, #FA3594, #941F58)",
         },
+      },
+      animation: {
+        'spin-slow': 'spin 20s linear infinite',
       },
       colors: {
         red: "#C32126",
@@ -19,6 +24,24 @@ export default {
         beige: "#9D882F",
         teal: "#0C5752",
         peach: "#FFC4C0",
+        btncolor: "#FD4360",
+        primary: {
+          red: "var(--primary-red)",
+          "red-light": "var(--primary-red-light)",
+          "red-dark": "var(--primary-red-dark)",
+        },
+        bg: {
+          dark: "var(--bg-dark)",
+          "dark-secondary": "var(--bg-dark-secondary)",
+          "dark-tertiary": "var(--bg-dark-tertiary)",
+        },
+        text: {
+          white: "var(--text-white)",
+          gray: "var(--text-gray)",
+        },
+        border: {
+          gray: "var(--border-gray)",
+        },
       },
       spacing: {
         4.5: "1.125rem", // 18px

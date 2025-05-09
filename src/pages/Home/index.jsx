@@ -9,9 +9,6 @@ import arrow from "../../../src/assets/Group53.png";
 import grid from "../../assets/grid.png";
 import svg from "../../assets/image.png";
 
-import left from "../../assets/elements/cta-bg1.png";
-import right from "../../assets/elements/cta-bg2.png";
-
 import ScrollTrigger from "gsap/ScrollTrigger";
 import MotionPathPlugin from "gsap/MotionPathPlugin";
 import TagSection from "./TagSection";
@@ -83,7 +80,7 @@ const HomePage = () => {
   }, []);
 
   return (
-    <main className="overflow-hidden">
+    <main className="overflow-hidden my-20">
       <Banner />
 
       <section
@@ -187,34 +184,38 @@ const HomePage = () => {
           <TestimonialsSection />
         </div>
       </section>
-    
-      <section className=" min-h-screen relative ">
-        <img src={img1} alt="" />
-        <div className="p-4 md:p-20">
-          <h2 className="text-4xl md:text-6xl text-teal font-bold text-center mb-8">
-            Got Questions? We’ve Got Real Answers.
-          </h2>
+
+      <section className="min-h-screen relative z-0 overflow-hidden">
+        <div className="absolute w-full  z-0">
+          <img
+            src={img1}
+            alt=""
+            className="w-full  object-cover pointer-events-none"
+          />
+        </div>
+
+        <div className="p-4 md:p-20 relative z-10">
+          {/* Centered Background Pattern Image */}
+          <img
+            src="/images/img_abstractgeometricseamlesspatterns2zqt82d_1.png"
+            alt=""
+            className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 
+                 opacity-20 pointer-events-none -z-10 w-full max-w-3xl object-contain"
+          />
+
+          {/* FAQ Section */}
           <FaqSection />
         </div>
 
-        <div className="absolute w-full bottom-0 -z-10">
-          <img src={img2} alt="" className="" />
+        {/* Bottom aligned image */}
+        <div className="absolute w-full bottom-0 z-0">
+          <img
+            src={img2}
+            alt=""
+            className="w-full  object-cover pointer-events-none"
+          />
         </div>
       </section>
-      {/* <section className="h-[30vh] mt-20 bg-[#4E2FDA] relative flex justify-center items-center flex-col ">
-        <img src={left} alt="" className="absolute top-0 right-0" />
-        <img src={right} alt="" className="absolute bottom-0 left-0" />
-
-        <h1 className="text-4xl  max-w-4xl font-bold text-white/80  text-center">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum
-        </h1>
-        <p className="text-2xl max-w-4xl">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit
-          odit ducimus optio ipsum similique nisi, officia modi totam illo
-          necessitatibus aliquid omnis et, iure vitae facilis dolorem nostrum
-          doloremque ea?
-        </p>
-      </section> */}
     </main>
   );
 };

@@ -4,6 +4,7 @@ import { Routes, Route } from "react-router-dom";
 import Layout from "../components/Layout";
 import Home from "../pages/Home";
 import ItServicesPage from "../pages/ItServices";
+import AboutUs from "../pages/AboutUs";
 import MarketingServicesPage from "../pages/Marketing";
 
 const AppRoutes = () => {
@@ -12,7 +13,8 @@ const AppRoutes = () => {
       <Route path="/" element={<Layout />}>
         <Route index element={<Home />} />
         <Route path="/it-services" element={<ItServicesPage />} />
-        <Route path="/markating" element={<MarketingServicesPage />} />
+        <Route path="/about-us" element={<AboutUs />} />
+        <Route path="/marketing" element={<MarketingServicesPage />} />
       </Route>
     </Routes>
   );
