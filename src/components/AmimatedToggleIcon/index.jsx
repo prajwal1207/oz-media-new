@@ -5,7 +5,7 @@ const AnimatedToggleIcon = ({
   isOpen,
   openIcon = <FaMinus />,
   closeIcon = <FaPlus />,
-  size = "text-2xl",
+  size = "text-xl",
   openColor = "text-red-500",
   closeColor = "text-gray-500",
   onClick,

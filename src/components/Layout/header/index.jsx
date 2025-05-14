@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import logo from "../../../assets/images/oz_logo.png";
 import { Link } from "react-router-dom";
 import classNames from "classnames";
 import "../style.css";
@@ -11,7 +10,7 @@ import { useScroll } from "motion/react";
 import { motion } from "framer-motion";
 
 const ACTIVE_COLOR = [
-  { linkColor: "#ffffff", bgColor: "#1E1E1E" },
+  { linkColor: "#ffffff", bgColor: "#000000" },
   { linkColor: "#ffffff", bgColor: "#FD273F" },
   { linkColor: "#ffffff", bgColor: "#8837B9" },
   { linkColor: "#ffffff", bgColor: "#FFE41B" },
@@ -53,16 +52,15 @@ const Header = () => {
   const navLinks = [
     { id: 1, path: "/", label: "Home" },
     { id: 2, path: "/about", label: "About Us" },
-    { id: 3, path: "/about", label: "Our Team" },
-    { id: 4, path: "/it-services", label: "It Services" },
-    { id: 5, path: "/it-services", label: "Digital Marketing" },
-    { id: 6, path: "/it-services", label: "Clients" },
-    { id: 7, path: "/contact", label: "Contact Us" },
+    { id: 3, path: "/it-services", label: "It Services" },
+    { id: 4, path: "/digital-marketing", label: "Digital Marketing" },
+    { id: 5, path: "/contact", label: "Contact Us" },
+    { id: 6, path: "/our-teams", label: "Our Teams" },
   ];
 
   return (
     <>
-      <div className="bg-transparent p-4 px-28 flex justify-between items-center relative z-50">
+      <div className="bg-transparent p-4 px-28 flex justify-between items-center relative z-50 ">
         <motion.div
           id="scroll-indicator"
           style={{
@@ -78,7 +76,8 @@ const Header = () => {
         />
 
         <Link to="./">
-          <img src={logo} className="h-18 object-cover" alt="Logo" />
+          {/* <img src={logo} className="h-18 object-cover" alt="Logo" /> */}
+          <h1 className="text-white text-2xl">Oz Media</h1>
         </Link>
 
         <AnimatedToggleIcon
@@ -88,7 +87,7 @@ const Header = () => {
           closeColor="text-white"
           isOpen={open}
           onClick={() => setOpen(!open)}
-          size="text-6xl"
+          size="text-4xl"
           className="font-bold"
         />
       </div>
@@ -100,7 +99,7 @@ const Header = () => {
           backgroundColor: ACTIVE_COLOR[activeColor].bgColor,
         }}
         className={classNames(
-          "fixed top-0 left-0 w-full h-full flex flex-col items-center justify-center z-40 p-40 ",
+          "fixed top-0 left-0 w-full h-full flex flex-col items-center justify-center z-40 p-4 sm:p-10 md:p-20 lg:p-40 ",
           "transition-all duration-500 ease-in-out",
           {
             "translate-y-0": open,
@@ -108,7 +107,12 @@ const Header = () => {
           }
         )}
       >
-        <div className="w-full flex">
+        <img
+          src="./images/img_abstractgeometricseamlesspatterns2zqt82c_2.png"
+          className="absolute inset-0 w-full h-full object-cover z-0 pointer-events-none"
+        />
+
+        <div className="w-full flex  ">
           <div className="w-1/2  sm:w-full">
             <ul className="text-2xl sm:text-4xl md:text-5xl lg:text-[3.5em] font-bold space-y-6 ">
               {navLinks.map((item) => (

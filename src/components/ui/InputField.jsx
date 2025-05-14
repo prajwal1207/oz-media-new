@@ -23,7 +23,7 @@ const InputField = ({
         value={value}
         onChange={onChange}
         required={required}
-        className={`w-full bg-transparent border border-border-gray p-2 text-white placeholder-primary-red focus:outline-none focus:border-primary-red ${className}`}
+        className={`w-full bg-transparent border border-gray-200/30 rounded-lg  p-2 text-white placeholder-[#fd4360]/70 focus:outline-none focus:border-[#fd4360] ${className}`}
         {...props}
       />
     </div>

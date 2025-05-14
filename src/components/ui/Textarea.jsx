@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 const Textarea = ({
   label,
@@ -7,7 +7,7 @@ const Textarea = ({
   onChange,
   required = false,
   rows = 4,
-  className = '',
+  className = "",
   ...props
 }) => {
   return (
@@ -23,7 +23,7 @@ const Textarea = ({
         onChange={onChange}
         required={required}
         rows={rows}
-        className={`w-full bg-transparent border border-border-gray p-2 text-white placeholder-primary-red focus:outline-none focus:border-primary-red ${className}`}
+        className={`w-full bg-transparent border rounded-lg border-gray-200/60 p-2 text-white placeholder-[#fd4360] focus:outline-none focus:border-[#fd4360] ${className}`}
         {...props}
       />
     </div>

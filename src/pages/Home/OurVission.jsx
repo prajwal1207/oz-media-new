@@ -1,4 +1,3 @@
-import React from "react";
 import svg from "../../assets/Work.png";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
@@ -54,9 +53,11 @@ const OurVision = () => {
         id="title2"
         className="w-full lg:w-1/2 p-4 sm:p-10 flex flex-col gap-6 justify-center"
       >
-        <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold">
-          OUR VISION
-        </h1>
+        <h2 className="text-[#fd4360] font-bold text-xl mb-4">OUR VISION</h2>
+        <h3 className="text-white font-bold text-5xl">
+          Empowering Brands to Lead the Future of Digital Innovation
+        </h3>
+
         <p className="text-base sm:text-xl lg:text-3xl">
           To be the ultimate digital powerhouse, where marketing and technology
           converge to shape the future of brands. We envision a world where
@@ -68,6 +69,11 @@ const OurVision = () => {
           seamless IT solutions, we strive to transform into market leaders,
           ensuring they thrive in an ever-evolving digital landscape.
         </p>
+        <img
+          src="/images/img_abstractgeometricseamlesspatterns2zqt82e_2.png"
+          alt="Abstract Pattern"
+          className="w-[255px] h-[33px]"
+        />
       </div>
     </div>
   );

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 const ClientsSection = () => {
   const clientLogos = [
@@ -13,25 +13,26 @@ const ClientsSection = () => {
     { id: 9, src: "/images/img_ditech_2.png", alt: "Client 9" },
     { id: 10, src: "/images/img_ditech_1.png", alt: "Client 10" },
     { id: 11, src: "/images/img_ditech_62x188.png", alt: "Client 11" },
-    { id: 12, src: "/images/img_ditech.png", alt: "Client 12" }
+    { id: 12, src: "/images/img_ditech.png", alt: "Client 12" },
   ];
 
   return (
-    <section className="py-16 bg-[#070707]">
+    <section className="py-16 ">
       <div className="container mx-auto px-4">
-        <h2 className="text-white font-bold text-4xl text-center mb-16">
+        <h2 className=" font-bold text-4xl text-center mb-16 text-[#fd4360] ">
           Join the growing list of our satisfied customers:
         </h2>
-        
+
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
           {clientLogos.map((logo, index) => (
             <React.Fragment key={logo.id}>
               <div className="flex justify-center items-center p-4">
-                <img src={logo.src} alt={logo.alt} className="h-[62px] w-[188px] object-contain" />
+                <img
+                  src={logo.src}
+                  alt={logo.alt}
+                  className="h-[62px] w-[188px] object-contain"
+                />
               </div>
-              
-              <div className="w-[1px] h-full bg-[#fd4360] my-8"></div>
-
               {(index + 1) % 4 === 0 && index !== clientLogos.length - 1 && (
                 <div className="col-span-full h-[1px] bg-[#fd4360] my-8"></div>
               )}

@@ -21,11 +21,11 @@
   height: 0px;
 }
 
-body {
+body  {
   background-color: #000000 ;
   color: #333;
   line-height: 1.6;
-  overflow-x: hidden;
+  overflow-x: hidden !important;
 }
 
 a {
@@ -36,6 +36,7 @@ a {
 .App {
   min-height: 100vh;
   width: 100%;
+  overflow: hidden;
 }
 
 @keyframes marquee {

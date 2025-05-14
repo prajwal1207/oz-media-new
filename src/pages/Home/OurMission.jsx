@@ -3,7 +3,6 @@ import svg from "../../assets/Group 12.png";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 
-
 const OurMission = () => {
   useGSAP(() => {
     const tl = gsap.timeline();
@@ -13,12 +12,12 @@ const OurMission = () => {
       opacity: 0,
       ease: "power2.out",
       duration: 1.5,
-        scrollTrigger: {
-          trigger: "#missionSection",
-          start: "20% 60%",
-          end: "20% 20%",
-          scrub: 1,
-        },
+      scrollTrigger: {
+        trigger: "#missionSection",
+        start: "20% 60%",
+        end: "20% 20%",
+        scrub: 1,
+      },
     });
 
     tl.from("#img", {
@@ -26,12 +25,12 @@ const OurMission = () => {
       opacity: 0,
       ease: "power2.out",
       duration: 1.5,
-        scrollTrigger: {
-          trigger: "#missionSection",
-          start: "20% 60%",
-          end: "20% 20%",
-          scrub: 1,
-        },
+      scrollTrigger: {
+        trigger: "#missionSection",
+        start: "20% 60%",
+        end: "20% 20%",
+        scrub: 1,
+      },
     });
   }, []);
 
@@ -45,9 +44,10 @@ const OurMission = () => {
         id="title"
         className="w-full lg:w-1/2 p-4 sm:p-10 flex flex-col gap-6 justify-center"
       >
-        <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold">
-          OUR MISSION
-        </h1>
+        <h2 className="text-[#fd4360] font-bold text-xl mb-4">OUR MISSION</h2>
+        <h3 className="text-white font-bold text-5xl">
+          Shaping the Future of Digital Innovation and Growth.
+        </h3>
         <p className="text-base sm:text-xl lg:text-3xl">
           To redefine the digital world by blending creativity, technology, and
           strategy into seamless brand experiences. We don't just market—we
@@ -58,6 +58,11 @@ const OurMission = () => {
           Every project is an opportunity to push boundaries and set new
           industry standards.
         </p>
+        <img
+          src="/images/img_abstractgeometricseamlesspatterns2zqt82e_2.png"
+          alt="Abstract Pattern"
+          className="w-[255px] h-[33px]"
+        />
       </div>
 
       {/* Right Content */}

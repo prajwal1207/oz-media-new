@@ -4,16 +4,60 @@ import HeroSection from "../../components/common/HeroSection";
 import PartnersMarquee from "../../components/Marque";
 import BlogSection from "./BlogSection";
 
+const logos = [
+  { src: "Fictional Company Logo.png", alt: "BestBank" },
+  { src: "/Fictional Company Logo-1.png", alt: "dataBites" },
+  { src: "Fictional Company Logo-2.png", alt: "MarketSavy" },
+  { src: "Fictional Company Logo-3.png", alt: "EpicDev" },
+  { src: "Fictional Company Logo-4.png", alt: "BestBank" },
+];
+
+  const blogPosts = [
+    {
+      id: 1,
+      title: "🚀 2025 Digital Marketing Trends You Can’t Ignore ",
+      date: "February 15, 2025",
+      comments: "No Comments",
+      excerpt:
+        "From AI-driven content to hyper-personalized campaigns, discover what’s shaping the digital landscape this year",
+      image:
+        "/pmc-media-group-blog-digital-marketing-trends-2025-ai-personalization-and-privacy-first-strategies.jpg",
+      link: "https://hiilite.com/12-digital-marketing-trends-to-look-out-for-in-2025/",
+    },
+    {
+      id: 2,
+      title: "🎯 Maximizing ROI: Smart Strategies for Paid Ads",
+      date: "April 24, 2025",
+      comments: "No Comments",
+      excerpt:
+        "Learn how to design high-converting ad campaigns that not only get clicks but deliver real business results",
+      image: "/technology-hologram-illustrated.jpg",
+      link: "https://johnwolfecompton.com/10-essential-tips-for-maximizing-your-roi-in-paid-digital-advertising/?utm_source=chatgpt.com",
+    },
+    {
+      id: 3,
+      title: "📸 Visual Storytelling: The Future of Brand Engagement",
+      date: "May 15, 2025",
+      comments: "No Comments",
+      excerpt:
+        "Why photos, videos, GIFs, and CGI are more than visuals—they’re your brand’s most powerful storytellers.",
+      image:
+        "/nxJPkeMtJ21FY6jipui0ww9fTHUEfQZZs54BMleU5xuyB9zQB-tmp6p65nye5.png",
+      link: "https://blog.brandsatplayllc.com/blog/video-marketing-trends-2025-why-visual-storytelling-is-the-future",
+    },
+  ];
+
+
 const MarketingServicesPage = () => {
   return (
-    <div className="my-28">
+    <div className="">
       <HeroSection
         title="Digital Marketing"
         subtitle=""
         url="/Rotate Anti (1).png"
       />
       <section className="container  mx-auto py-10">
-        <PartnersMarquee />
+        <PartnersMarquee logos={logos} />
       </section>
       <section className="py-16 bg-[#000000]">
         <div className="container mx-auto px-4">
@@ -96,7 +140,7 @@ const MarketingServicesPage = () => {
           </button>
         </div>
       </section>
-      <BlogSection />
+      <BlogSection blogPosts={blogPosts} />
     </div>
   );
 };

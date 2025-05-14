@@ -11,7 +11,7 @@ const Button = ({
   const baseClasses = 'font-montserrat font-bold text-lg transition-colors duration-200 focus:outline-none';
   
   const variantClasses = {
-    primary: 'bg-primary-red text-white hover:bg-primary-red-dark',
+    primary: 'bg-primary-red text-white hover:bg-[#fd4360]',
     outline: 'border border-primary-red text-primary-red hover:bg-primary-red hover:text-white',
     text: 'text-primary-red hover:underline'
   };
