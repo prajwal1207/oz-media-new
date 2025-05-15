@@ -60,7 +60,7 @@ const Header = () => {
 
   return (
     <>
-      <div className="bg-transparent p-4 px-28 flex justify-between items-center relative z-50 ">
+      <div className="bg-transparent p-4 xl:px-28 sm:px-14 px-10 flex justify-between items-center relative z-50 ">
         <motion.div
           id="scroll-indicator"
           style={{

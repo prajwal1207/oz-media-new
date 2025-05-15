@@ -109,7 +109,7 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/team" className="hover:text-white transition">
+                <Link to="/our-teams" className="hover:text-white transition">
                   Our Team
                 </Link>
               </li>
@@ -120,24 +120,24 @@ const Footer = () => {
           <div>
             <h3 className="text-xl sm:text-2xl font-semibold mb-3">Services</h3>
             <ul className="space-y-2 text-base text-gray-400">
-              <li>
+              {/* <li>
                 <Link
-                  to="/services/social-media"
+                  to="/our-teams"
                   className="hover:text-white transition"
                 >
-                  Social Media Marketing
+                  Our Teams
                 </Link>
-              </li>
+              </li> */}
               <li>
                 <Link
-                  to="/services/digital"
+                  to="/digital-marketing"
                   className="hover:text-white transition"
                 >
                   Digital Marketing
                 </Link>
               </li>
               <li>
-                <Link to="/services/it" className="hover:text-white transition">
+                <Link to="/it-services" className="hover:text-white transition">
                   IT Services
                 </Link>
               </li>
@@ -147,21 +147,21 @@ const Footer = () => {
           {/* Oz Internationals */}
           <div>
             <h3 className="text-xl sm:text-2xl font-semibold mb-3">
-              Oz Internationals
+              Subdomain
             </h3>
             <ul className="space-y-2 text-base text-gray-400">
               <li>
-                <Link to="/oz" className="hover:text-white transition">
-                  Oz
+                <Link to="#" className="hover:text-white transition">
+                  Oz Learnings
                 </Link>
               </li>
               <li>
-                <Link to="/oz/digital" className="hover:text-white transition">
+                <Link to="#" className="hover:text-white transition">
                   Digital Marketing
                 </Link>
               </li>
               <li>
-                <Link to="/oz/it" className="hover:text-white transition">
+                <Link to="#" className="hover:text-white transition">
                   IT Services
                 </Link>
               </li>

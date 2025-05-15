@@ -16,19 +16,19 @@ const AboutUs = () => {
       {/* <Header /> */}
 
       <main>
-        <HeroSection title="About Us" subtitle="" url="/Looper-3.png" />
+        <HeroSection title="About Us" subtitle="" url="/Topology-1 (1).png" />
 
         <div className=" container mx-auto relative">
-          <div className="relative z-10 flex flex-col md:flex-row items-center justify-between px-4 md:px-16 py-16">
-            <div className="md:w-1/2 bomb-8 md:mb-0">
+          <div className="relative z-10 flex flex-col md:flex-row items-center justify-between px-4 md:px-10 py-16">
+            <div className="md:w-1/3 bomb-8 md:mb-0">
               <img
-                src="/images/Image (1).png"
+                src="/8.png"
                 alt="Abstract Building"
-                className="w-full max-w-xl"
+                className="w-full max-w-8xl"
               />
             </div>
 
-            <div className="md:w-1/2">
+            <div className="md:w-2/3">
               <VisionMissionSection />
             </div>
           </div>

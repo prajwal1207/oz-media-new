@@ -5,13 +5,9 @@ export default {
     extend: {
       fontFamily: {
         montserrat: ["Montserrat", "sans-serif"],
-        roboto: ["Roboto", "sans-serif"],
-        sans: ["Inter", "sans-serif"],
         display: ["Poppins", "sans-serif"],
-        handwritten: ["Pacifico", "cursive"],
-        backgroundImage: {
-          "pink-gradient": "linear-gradient(to right, #FA3594, #941F58)",
-        },
+        handwritten: ["Segoe UI", "cursive"],
+     
       },
       animation: {
         'spin-slow': 'spin 20s linear infinite',

@@ -3,11 +3,9 @@ import gsap from "gsap";
 import img1 from "../../assets/images/two-paperplane.png";
 import img2 from "../../assets/images/single-paperplane.png";
 import plane from "../../assets/Svg/download.svg";
-import styles from "./style.module.css";
 import cover from "../../../src/assets/Group.png";
 import arrow from "../../../src/assets/Group53.png";
 import grid from "../../assets/grid.png";
-import svg from "../../assets/image.png";
 
 import ScrollTrigger from "gsap/ScrollTrigger";
 import MotionPathPlugin from "gsap/MotionPathPlugin";
@@ -111,49 +109,51 @@ const HomePage = () => {
         id="planeSec"
         className="bg-red-300 min-h-screen relative flex items-center justify-center overflow-visible"
       >
+        {/* Top Plane */}
         <img
           id="planeSvg"
           ref={planeRef}
           src={plane}
           alt="plane"
-          className="h-32 md:h-64 w-auto rotate-12 -left-40 md:-left-60 absolute top-0"
+          className="h-20 sm:h-32 md:h-48 lg:h-64 w-auto rotate-12 absolute -left-20 sm:-left-32 md:-left-60 top-0 z-0"
         />
 
-        <div className="absolute z-10 container px-4 sm:px-6 md:px-20 py-10 text-left flex flex-col gap-6 md:gap-10 font-bold">
-          <h1 className="text-[#fd4360] text-4xl sm:text-5xl md:text-6xl lg:text-8xl leading-tight">
+        {/* Content in Normal Flow */}
+        <div className="relative z-10 w-full max-w-7xl px-4 sm:px-6 md:px-12 lg:px-20 py-10 flex flex-col gap-6 md:gap-10 font-bold text-left">
+          <h1 className="text-[#fd4360] text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl leading-tight font-montserrat">
             Next-Level Innovation, <br className="hidden sm:block" />
             Next-Level Impact
           </h1>
 
-          <p className="text-white sm:text-lg md:text-2xl lg:text-4xl font-normal">
+          <p className="text-white/80 text-base sm:text-lg md:text-2xl lg:text-3xl font-normal font-display leading-relaxed">
             Oz Media Planet is a powerhouse where cutting-edge technology meets
             high-impact digital marketing. We are not just a service provider—we
             are creators, disruptors, and growth accelerators. With expertise in
-            digital marketing and IT development, we engineer brands tFhat
-            dominate and build technology that scales. From crafting powerful
-            marketing campaigns to developing next-gen software solutions, our
-            goal is simple—to transform businesses into industry leaders.
+            digital marketing and IT development, we engineer brands that
+            dominate and build technology that scales.
           </p>
         </div>
 
+        {/* Bottom Plane */}
         <img
           ref={planeRef2}
           src={plane}
           alt="plane"
-          className="h-24 sm:h-32 md:h-48 w-auto bottom-0 right-0 absolute rotate-[200deg]"
+          className="h-16 sm:h-24 md:h-36 lg:h-48 w-auto absolute bottom-0 right-0 rotate-[200deg] z-0"
         />
       </section>
-      <section className="h-screen overflow-hidden">
+
+      <section className="min-h-screen ">
         <OurMission />
       </section>
-      <section className="h-screen overflow-hidden">
+      <section className="min-h-screen ">
         <OurVision />
       </section>
 
-      <section className="h-screen p-4 md:p-20 overflow-hidden">
+      <section className="h-screen p-4 md:p-20 ">
         <TagSection />
       </section>
-      <section className="min-h-screen container mx-auto  px-4 sm:px-6 lg:px-8 py-20 overflow-hidden">
+      <section className="min-h-screen container mx-auto  px-4 sm:px-6 lg:px-8 py-20 ">
         {/* Header */}
         <div className=" ">
           <h2 className="text-[#fd4360] font-bold text-xl mb-4">Our Values</h2>
@@ -202,14 +202,14 @@ const HomePage = () => {
       <section>
         <ClientsSection />
       </section>
-      <section className=" h-screen flex justify-center items-center overflow-hidden">
+      <section className=" h-screen flex justify-center items-center ">
         <div className="container mx-auto px-4">
           <div className="mb-12">
-            <h2 className="text-[#fd4360] font-bold text-xl mb-4">
+            <h2 className="text-[#fd4360] font-bold text-base sm:text-lg md:text-xl mb-2 sm:mb-3 md:mb-4">
               Testimonials
             </h2>
-            <h3 className="text-white font-bold text-5xl">
-              DON’T TAKE OUR WORD FOR IT​
+            <h3 className="text-white font-bold text-2xl sm:text-3xl md:text-5xl leading-tight text-center sm:text-left">
+              DON’T TAKE OUR WORD FOR IT
             </h3>
           </div>
           <TestimonialsCarouselSec />

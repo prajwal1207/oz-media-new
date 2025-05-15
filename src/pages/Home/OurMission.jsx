@@ -35,50 +35,50 @@ const OurMission = () => {
   }, []);
 
   return (
-    <div
+    <section
       id="missionSection"
-      className="flex flex-col lg:flex-row h-full  p-6 sm:p-10 lg:p-20 justify-center "
+      className="flex flex-col lg:flex-row items-center justify-center gap-10 px-4 sm:px-10 lg:px-20 py-10"
     >
       {/* Left Content */}
       <div
         id="title"
-        className="w-full lg:w-1/2 p-4 sm:p-10 flex flex-col gap-6 justify-center"
+        className="w-full lg:w-1/2 flex flex-col gap-6 justify-center text-center lg:text-left"
       >
-        <h2 className="text-[#fd4360] font-bold text-xl mb-4">OUR MISSION</h2>
-        <h3 className="text-white font-bold text-5xl">
+        <h2 className="text-[#fd4360] font-bold text-lg sm:text-xl">
+          OUR MISSION
+        </h2>
+        <h3 className="text-white font-bold text-3xl sm:text-4xl lg:text-5xl leading-tight">
           Shaping the Future of Digital Innovation and Growth.
         </h3>
-        <p className="text-base sm:text-xl lg:text-3xl">
+        <p className="text-base sm:text-lg lg:text-xl text-white/80">
           To redefine the digital world by blending creativity, technology, and
           strategy into seamless brand experiences. We don't just market—we
           create, innovate, and build digital ecosystems that engage, inspire,
           and convert.
         </p>
-        <p className="text-base sm:text-xl lg:text-3xl">
+        <p className="text-base sm:text-lg lg:text-xl text-white/80">
           Every project is an opportunity to push boundaries and set new
           industry standards.
         </p>
         <img
           src="/images/img_abstractgeometricseamlesspatterns2zqt82e_2.png"
           alt="Abstract Pattern"
-          className="w-[255px] h-[33px]"
+          className="mx-auto lg:mx-0 w-40 sm:w-52"
         />
       </div>
 
-      {/* Right Content */}
+      {/* Right Image Content */}
       <div
         id="img"
-        className="w-full lg:w-1/2 p-10 lg:p-28 px-6 sm:px-16 lg:px-32"
+        className="w-full lg:w-1/2 flex justify-center items-center p-10"
       >
-        <div className="bg-[#FFC502] w-full h-72 sm:h-96 lg:h-full relative rounded-[30px] flex justify-center items-center">
-          <img
-            src={svg}
-            alt="Our Mission"
-            className="absolute -top-24 sm:-top-32 lg:-top-56 w-52 sm:w-40 lg:w-auto"
-          />
-        </div>
+        <img
+          src="/Group 44228.png"
+          alt="Our Mission"
+          className="h-full"
+        />
       </div>
-    </div>
+    </section>
   );
 };
 
