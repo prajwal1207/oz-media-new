@@ -157,7 +157,7 @@ const HomePage = () => {
         {/* Header */}
         <div className=" ">
           <h2 className="text-[#fd4360] font-bold text-xl mb-4">Our Values</h2>
-          <h3 className="text-white font-bold text-5xl">
+          <h3 className="text-white font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-snug sm:leading-tight md:leading-tight">
             Driven by integrity. <br /> Powered by innovation. <br /> Focused on
             impact.
           </h3>
@@ -169,7 +169,7 @@ const HomePage = () => {
           />
         </div>
 
-        {/* Image Section */}
+        {/* Image Section */}``
         <div className=" mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8">
           <img
             src={cover}
@@ -187,7 +187,7 @@ const HomePage = () => {
         />
         <div className="">
           <div className="flex text-center justify-center gap-10">
-            <h1 className="text-6xl font-bold bg-gradient-to-r from-[#FA3594] to-[#fd4360] bg-clip-text text-transparent ">
+            <h1 className="font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl bg-gradient-to-r from-[#FA3594] to-[#fd4360] bg-clip-text text-transparent">
               Why Choose Us
             </h1>
           </div>

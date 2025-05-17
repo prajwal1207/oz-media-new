@@ -58,6 +58,8 @@ const Header = () => {
     { id: 6, path: "/our-teams", label: "Our Teams" },
   ];
 
+  console.log(socialIcons, "socialIcons");
+
   return (
     <>
       <div className="bg-transparent p-4 xl:px-28 sm:px-14 px-10 flex justify-between items-center relative z-50 ">

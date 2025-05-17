@@ -6,7 +6,7 @@ import Button from "../../components/Buttons";
 const Banner = () => {
   return (
     <section
-      className="relative flex items-center justify-center h-screen pt-20 overflow-hidden"
+      className="relative flex items-center justify-center min-h-screen pt-20 overflow-hidden"
       data-scroll
       data-scroll-speed="1"
     >
@@ -25,21 +25,22 @@ const Banner = () => {
         Your browser does not support the video tag.
       </video>
 
-      {/* Overlay for readability */}
+      {/* Overlay */}
       <div className="absolute inset-0 bg-black/50 -z-10" />
 
       {/* Main Content */}
-      <div className="flex flex-col lg:flex-row items-center justify-between w-full max-w-[90vw] px-4 lg:px-0 h-full text-white gap-8 ">
-        <div className="flex-1 flex flex-col justify-center space-y-6 text-left md:text-center lg:text-left">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-8xl leading-tight font-[800] ">
-            Innovate <span className="text-[#fd4360]"> Inspire</span> <br />{" "}
+      <div className="flex flex-col lg:flex-row items-center justify-between w-full max-w-[90vw] px-4 lg:px-0 h-full text-white gap-8">
+        <div className="flex-1 flex flex-col justify-center space-y-6 text-center lg:text-left">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-extrabold leading-tight">
+            Innovate <span className="text-[#fd4360]">Inspire</span> <br className="hidden md:block" />
             Impact
           </h1>
-          <p  className="font-display text-4xl" >
-            Marketing That Moves, Technology <br /> That Builds, All Under One Roof.
+          <p className="text-xl sm:text-2xl md:text-3xl font-display">
+            Marketing That Moves, Technology <br className="hidden md:block" />
+            That Builds, All Under One Roof.
           </p>
-          <p  className="font-display text-xl " >
-            We are OZ Media — a hybrid digital force blending high-impact <br />
+          <p className="text-base sm:text-lg md:text-xl font-display">
+            We are OZ Media — a hybrid digital force blending high-impact <br className="hidden sm:block" />
             marketing with high-performance development.
           </p>
         </div>

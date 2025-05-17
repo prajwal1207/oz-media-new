@@ -5,33 +5,30 @@ import gsap from "gsap";
 
 const OurMission = () => {
   useGSAP(() => {
-    const tl = gsap.timeline();
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: "#missionSection",
+        start: "20% 60%",
+        end: "20% 20%",
+        scrub: 1,
+      },
+    });
 
     tl.from("#title", {
       y: 200,
       opacity: 0,
       ease: "power2.out",
       duration: 1.5,
-      scrollTrigger: {
-        trigger: "#missionSection",
-        start: "20% 60%",
-        end: "20% 20%",
-        scrub: 1,
+    }).from(
+      "#img",
+      {
+        y: 200,
+        opacity: 0,
+        ease: "power2.out",
+        duration: 1.5,
       },
-    });
-
-    tl.from("#img", {
-      y: 200,
-      opacity: 0,
-      ease: "power2.out",
-      duration: 1.5,
-      scrollTrigger: {
-        trigger: "#missionSection",
-        start: "20% 60%",
-        end: "20% 20%",
-        scrub: 1,
-      },
-    });
+      "+=1"
+    );
   }, []);
 
   return (
@@ -72,11 +69,7 @@ const OurMission = () => {
         id="img"
         className="w-full lg:w-1/2 flex justify-center items-center p-10"
       >
-        <img
-          src="/Group 44228.png"
-          alt="Our Mission"
-          className="h-full"
-        />
+        <img src="/Group 44228.png" alt="Our Mission" className="h-full" />
       </div>
     </section>
   );

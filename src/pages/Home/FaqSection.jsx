@@ -52,6 +52,7 @@ const FaqSection = () => {
           return (
             <div
               key={index}
+              id={`faq-${index}`}
               className="border  font-Montserrat  border-[#fd4360]  overflow-hidden transition duration-300"
             >
               <button

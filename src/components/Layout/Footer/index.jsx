@@ -50,9 +50,11 @@ const Footer = () => {
             <span className="animate-pulse">|</span>
           </motion.p>
         </div>
-        <button className="border-2 rounded-full border-[#fd4360] text-white px-8 sm:px-16 py-3 sm:py-4 text-base sm:text-lg hover:bg-[#fd4360] transition-all duration-300">
-          Sign Up
-        </button>
+        <a href="/contact">
+          <button className="border-2 rounded-full border-[#fd4360] text-white px-8 sm:px-16 py-3 sm:py-4 text-base sm:text-lg hover:bg-[#fd4360] transition-all duration-300">
+            Sign Up
+          </button>
+        </a>
       </section>
 
       {/* Divider */}
@@ -72,8 +74,8 @@ const Footer = () => {
               About OZ Media Planet
             </h3>
             <p className="text-base sm:text-lg leading-relaxed text-gray-300">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-              dictum aliquet accumsan porta lectus ridiculus in mattis.
+              We blend creative marketing with smart technology to grow your
+              brand and scale your business — all under one roof.
             </p>
             <div className="mt-6 flex justify-center md:justify-start gap-4">
               {Object.values(socialIcons).map((icon, index) => (

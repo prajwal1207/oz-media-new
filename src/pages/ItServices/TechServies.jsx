@@ -6,38 +6,38 @@ const TechServices = () => {
     {
       id: 2,
       icon: "/images/img_lineiconsbundlexubzu9k_1_9.png",
-      title: "SEO",
+      title: "WEBSITE DEVELOPMENT",
       description:
-        "Get found where it matters. With powerful SEO strategies, every search leads straight to you. From keyword optimization to technical fine-tuning, we drive organic traffic, boost rankings, and put your brand ahead of the competition.",
+        "A website is more than just an online space—it’s where brands come to life. Every element, from design to functionality, should create a seamless experience that captivates and converts. With expert craftsmanship and cutting-edge technology, we build websites that don’t just meet expectations—they set new standards.",
     },
     {
       id: 1,
       icon: "/images/img_lineiconsbundlexubzu9k_1_4.png",
-      title: "Social Media",
+      title: "Software Development",
       description:
-        "Turn engagement into growth with powerful social media strategies. From content creation to ad campaigns and audience interaction, every move is designed to amplify reach, build loyalty, and drive results.",
+        "We specialize in building robust, scalable software solutions using a variety of cutting-edge technologies. Whether it’s Python, MERN, MEAN, PHP, Java, or mobile app development, our team delivers high-quality, custom-built applications tailored to your business needs. With expertise across multiple languages and frameworks, we create software that’s efficient, secure, and future-ready",
     },
 
     {
       id: 3,
       icon: "/images/img_lineiconsbundlexubzu9k_1_8.png",
-      title: "CREATIVE STUDIO",
+      title: "UI/UX Design",
       description:
-        "Transform ideas into stunning visuals with expert photo and video production. From brand storytelling to high-quality product shoots, we craft compelling content that enhances your brand’s identity and captivates your audience.",
+        "We craft smart, user-focused designs that look great and work even better. From sleek interfaces to seamless user journeys, our UI/UX solutions turn ideas into intuitive digital experiences. Every screen we design is built to engage, convert, and keep your users happy. Clean, creative, and always user-first — that’s our approach.",
     },
     {
       id: 4,
       icon: "/images/img_lineiconsbundlexubzu9k_1_7.png",
-      title: "DYNAMIC VISUAL CONTENT",
+      title: "App Development",
       description:
-        "Stand out with eye-catching GIFs, videos, and CGI creations designed to grab attention and drive engagement. From trending social clips to high-impact brand storytelling, we craft visuals.",
+        "We build custom, high-performance mobile apps for iOS, Android, and cross-platform platforms. Our team ensures seamless user experiences, fast performance, and secure integrations. From concept to launch, we deliver apps that are reliable, scalable, and designed to meet your business needs. Whether native or hybrid, we use the latest technologies to bring your app to life.",
     },
     {
       id: 5,
       icon: "/images/img_lineiconsbundlexubzu9k_1_6.png",
-      title: "Email marketing",
+      title: "Graphic Designing",
       description:
-        "Turn inboxes into income. Our email marketing campaigns are designed to engage, convert, and keep your audience coming back. From eye-catching designs.",
+        "We bring your brand to life with stunning visuals that leave a lasting impression. From logos and brochures to social media graphics and marketing materials, our designs capture your message with creativity and precision. Whether you need bold, modern, or timeless designs, we craft visuals that connect and inspire.",
     },
     {
       id: 6,
@@ -49,45 +49,24 @@ const TechServices = () => {
     {
       id: 7,
       icon: "/images/img_lineiconsbundlexubzu9k_1_4.png",
-      title: "STRATEGIC DIGITAL ADVERTISING",
+      title: "API Development",
       description:
-        "Drive real growth with smart, data-backed ad strategies. From precise audience targeting to high-converting creatives, we design and manage campaigns.",
+        "We create powerful, secure, and scalable APIs that connect your applications seamlessly. Our expert developers build custom APIs that enable smooth data exchange, enhance functionality, and improve system integrations. Whether you need RESTful or GraphQL APIs, we ensure your API solutions are reliable and future-proof.",
     },
 
     {
       id: 8,
       icon: "/images/img_lineiconsbundlexubzu9k_1_3.png",
-      title: "Pay-Per-Click (PPC) Advertising",
+      title: "Software Development",
       description:
-        "Get seen. Get clicks. Get results. Our PPC campaigns put your brand at the top when it matters most. We target the right audience, manage your budget wisely, and turn traffic into real customers.",
+        "We build powerful, custom software solutions using today’s leading technologies. Our expertise spans Python, MEAN stack, MERN stack, PHP, Java, and mobile app development. Whether you’re launching a new product or upgrading an existing system, we deliver secure, scalable, and high-performance software tailored to your business goals.",
     },
     {
       id: 9,
       icon: "/images/img_lineiconsbundlexubzu9k_1_2.png",
-      title: "Affiliate Marketing",
+      title: "E-commerce Web Development",
       description:
-        "Grow your business through the power of partnerships. With our affiliate marketing strategies, you only pay for real results—sales, leads, or traffic. We connect you with trusted affiliates who promote your brand and drive performance",
-    },
-    {
-      id: 10,
-      icon: "/images/img_lineiconsbundlexubzu9k_1_1.png",
-      title: "Paid social",
-      description:
-        "Grow your business through the power of partnerships. With our affiliate marketing strategies, you only pay for real results—sales, leads, or traffic. We connect you with trusted affiliates who promote your brand and drive performance4",
-    },
-    {
-      id: 11,
-      icon: "/images/img_lineiconsbundlexubzu9k_1_48x48.png",
-      title: "GOOGLE ADS",
-      description:
-        "Get your business in front of millions with Google Ads. We create targeted campaigns that reach your ideal customers at the perfect moment—driving traffic, leads, and sales",
-    },
-    {
-      id: 12,
-      icon: "/images/img_lineiconsbundlexubzu9k_1.png",
-      title: "Blockchain development",
-      description:
-        "We bring the right people together to challenge established thinking and drive transform in 2020",
+        "We create dynamic, user-friendly e-commerce websites that drive sales and deliver seamless shopping experiences. From product catalogs to secure payment integration, our solutions are built for speed, scalability, and success. Whether you need a custom store or a platform like Shopify, WooCommerce, or Magento — we turn your online vision into a high-performing digital storefront",
     },
   ];
 
