@@ -1,10 +1,5 @@
 import { useRef } from "react";
 import gsap from "gsap";
-import img1 from "../../assets/images/two-paperplane.png";
-import img2 from "../../assets/images/single-paperplane.png";
-import plane from "../../assets/Svg/download.svg";
-import cover from "../../../src/assets/Group.png";
-import arrow from "../../../src/assets/Group53.png";
 import grid from "../../assets/grid.png";
 
 import ScrollTrigger from "gsap/ScrollTrigger";
@@ -15,11 +10,26 @@ import { useGSAP } from "@gsap/react";
 import OurMission from "./OurMission";
 import OurVision from "./OurVission";
 import Banner from "./Banner";
-import TestimonialsCarouselSec from "./TestimonialsSec";
-import ClientsSection from "./Brands";
+
+import PartnersMarquee from "../../components/Marque";
+import CustomVideoSection from "./VideoSection";
 
 gsap.registerPlugin(MotionPathPlugin);
 gsap.registerPlugin(ScrollTrigger);
+
+const logos = [
+  { src: "/Assets/asus_logo.svg.png", alt: "BestBank" },
+  { src: "/Assets/google_logo.svg.png", alt: "dataBites" },
+  { src: "/Assets/huawei_logo.svg.png", alt: "MarketSavy" },
+  { src: "/Assets/Logo.svg.png", alt: "EpicDev" },
+  { src: "/Assets/intel_logo.svg.png", alt: "BestBank" },
+  {
+    src: "/Assets/samsung_fire__marine_insurance_logo.svg.png",
+    alt: "BestBank",
+  },
+  { src: "/Assets/tech_mahindra_logo.svg.png", alt: "BestBank" },
+  { src: "/Assets/oracle_logo.svg.png", alt: "BestBank" },
+];
 
 const HomePage = () => {
   const planeRef = useRef(null);
@@ -104,43 +114,29 @@ const HomePage = () => {
 
   return (
     <main className="overflow-hidden mb-20">
-      <Banner />
+      <div className="mx-4">
+        <Banner />
+      </div>
       <section
         id="planeSec"
-        className="bg-red-300 min-h-screen relative flex items-center justify-center overflow-visible"
+        className="bg-red-300 min-h-[50vh] relative flex items-center justify-center overflow-visible"
       >
-        {/* Top Plane */}
-        <img
-          id="planeSvg"
-          ref={planeRef}
-          src={plane}
-          alt="plane"
-          className="h-20 sm:h-32 md:h-48 lg:h-64 w-auto rotate-12 absolute -left-20 sm:-left-32 md:-left-60 top-0 z-0"
-        />
-
         {/* Content in Normal Flow */}
-        <div className="relative z-10 w-full max-w-7xl px-4 sm:px-6 md:px-12 lg:px-20 py-10 flex flex-col gap-6 md:gap-10 font-bold text-left">
-          <h1 className="text-[#fd4360] text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl leading-tight font-montserrat">
-            Next-Level Innovation, <br className="hidden sm:block" />
-            Next-Level Impact
+        <div className="relative z-10 w-full max-w-8xl px-4 sm:px-6 md:px-12 lg:px-20 py-10 flex flex-col gap-6 md:gap-10 text-black  text-center">
+          <h1 className="text-3xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-5xl leading-tight font-montserrat font-bold ">
+            Overview
           </h1>
 
-          <p className="text-white/80 text-base sm:text-lg md:text-2xl lg:text-3xl font-normal font-display leading-relaxed">
+          <p className=" text-base sm:text-lg md:text-2xl lg:text-2xl font-normal font-display leading-relaxed ">
             Oz Media Planet is a powerhouse where cutting-edge technology meets
             high-impact digital marketing. We are not just a service provider—we
-            are creators, disruptors, and growth accelerators. With expertise in
-            digital marketing and IT development, we engineer brands that
-            dominate and build technology that scales.
+            are creators, disruptors, and growth accelerators.
+          </p>
+
+          <p className=" text-base sm:text-lg md:text-2xl lg:text-2xl font-normal font-display leading-relaxed ">
+          With expertise in digital marketing and IT development, we engineer brands that dominate and build technology that scales. From crafting powerful marketing campaigns to developing next-gen software solutions, our goal is simple-to transform businesses into industry <br />  leaders.
           </p>
         </div>
-
-        {/* Bottom Plane */}
-        <img
-          ref={planeRef2}
-          src={plane}
-          alt="plane"
-          className="h-16 sm:h-24 md:h-36 lg:h-48 w-auto absolute bottom-0 right-0 rotate-[200deg] z-0"
-        />
       </section>
 
       <section className="min-h-screen ">
@@ -155,24 +151,20 @@ const HomePage = () => {
       </section>
       <section className="min-h-screen container mx-auto  px-4 sm:px-6 lg:px-8 py-20 ">
         {/* Header */}
-        <div className=" ">
-          <h2 className="text-[#fd4360] font-bold text-xl mb-4">Our Values</h2>
-          <h3 className="text-white font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-snug sm:leading-tight md:leading-tight">
-            Driven by integrity. <br /> Powered by innovation. <br /> Focused on
-            impact.
-          </h3>
-
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-10 mb-10 sm:mb-16">
           <img
-            src={arrow}
+            src="/Assets/Group 53 (1).png"
             alt="Arrow icon"
-            className="rotate-12 w-10 sm:w-14 md:w-12 lg:w-16"
+            className="rotate-12 w-12 sm:w-14 md:w-16 lg:w-20"
           />
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold bg-gradient-to-r from-[#095383] to-[#02121D] bg-clip-text text-transparent font-display text-center sm:text-left">
+            Our Values
+          </h2>
         </div>
-
         {/* Image Section */}``
         <div className=" mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8">
           <img
-            src={cover}
+            src="/Assets/Group 304 (2).png"
             alt="Cover Image"
             className="mx-w-[700px] h-auto object-cover rounded-md "
           />
@@ -186,64 +178,72 @@ const HomePage = () => {
           className="absolute top-0 left-0 w-full h-full object-cover z-0"
         />
         <div className="">
-          <div className="flex text-center justify-center gap-10">
-            <h1 className="font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl bg-gradient-to-r from-[#FA3594] to-[#fd4360] bg-clip-text text-transparent">
+          <div className="flex text-center justify-center gap-10 text-black">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold bg-gradient-to-r from-[#FA3594] to-[#941F58] bg-clip-text text-transparent font-display text-center sm:text-left">
               Why Choose Us
-            </h1>
+            </h2>
           </div>
-          <p className="text-2xl max-w-7xl px-auto py-6 text-center text-white">
+          <p className="text-2xl max-w-7xl px-auto py-6 text-center ">
             At Oz Media Planet, we don't just follow trends—we create them. We
             are a powerhouse of Digital Marketing and Information Technology
             Development, blending strategy, creativity, and innovation to
             transform businesses into industry leaders.
           </p>
+          <p className="text-3xl font-bold max-w-7xl px-auto py-6 text-center">
+            They Came. We Coded. They Cheered
+          </p>
         </div>
       </section>
-      <section>
-        <ClientsSection />
-      </section>
-      <section className=" h-screen flex justify-center items-center ">
-        <div className="container mx-auto px-4">
-          <div className="mb-12">
-            <h2 className="text-[#fd4360] font-bold text-base sm:text-lg md:text-xl mb-2 sm:mb-3 md:mb-4">
-              Testimonials
-            </h2>
-            <h3 className="text-white font-bold text-2xl sm:text-3xl md:text-5xl leading-tight text-center sm:text-left">
-              DON’T TAKE OUR WORD FOR IT
-            </h3>
-          </div>
-          <TestimonialsCarouselSec />
-        </div>
-      </section>
+
       <section className="min-h-screen relative z-0 overflow-hidden my-14">
-        <div className="absolute w-full  z-0">
-          <img
-            src={img1}
-            alt=""
-            className="w-full  object-cover pointer-events-none"
-          />
-        </div>
-
+        {/* Header */}
+        <p className="text-pink-500 text-2xl font-semibold text-center">FAQ</p>
+        <h2 className="text-2xl sm:text-4xl font-display  font-bold text-center bg-gradient-to-r from-[#5A1C72] to-[#2B0659] bg-clip-text text-transparent">
+          Got Questions? We’ve Got Real Answers.
+        </h2>
         <div className="p-4 md:p-20 relative z-10">
-          {/* Centered Background Pattern Image */}
-          <img
-            src="/images/img_abstractgeometricseamlesspatterns2zqt82d_1.png"
-            alt=""
-            className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 
-                 opacity-15 pointer-events-none -z-10 w-full max-w-3xl object-contain"
-          />
-
-          {/* FAQ Section */}
           <FaqSection />
         </div>
+      </section>
 
-        {/* Bottom aligned image */}
-        <div className="absolute w-full bottom-0 z-0">
-          <img
-            src={img2}
-            alt=""
-            className="w-full  object-cover pointer-events-none"
-          />
+      <section className="py-10">
+        <h2 className="text-2xl sm:text-4xl font-display mb-20  font-bold text-center bg-gradient-to-r from-[#5A1C72] to-[#2B0659] bg-clip-text text-transparent">
+          Join the growing list of our satisfied customers
+        </h2>
+        <PartnersMarquee logos={logos} />
+      </section>
+      <section className=" py-16">
+        <div className="max-w-[80%] mx-auto px-2 sm:px-6 lg:px-8">
+          <CustomVideoSection />
+          {/* Testimonials */}
+          <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+            {[
+              {
+                quote:
+                  "We love Landingfolio! Our designers were using it for their projects, so clients already knew what Landingfolio was and how to use it.",
+                name: "Darlene Robertson",
+                title: "Product Manager at Jomanar",
+              },
+              {
+                quote:
+                  "I didn’t know designing in Webflow could be this individualized. I’d never considered it before, but Landingfolio changed my mind.",
+                name: "Bessie Cooper",
+                title: "Freelance UX Designer",
+              },
+              {
+                quote:
+                  "We love Landingfolio! Our designers were using it for their projects, so clients already knew what Landingfolio was and how to use it.",
+                name: "Arlene McCoy",
+                title: "Product Designer at Martina.co",
+              },
+            ].map(({ quote, name, title }, idx) => (
+              <div key={idx} className="text-black">
+                <p className="text-lg mb-4">"{quote}"</p>
+                <p className="font-bold">{name}</p>
+                <p className="text-sm text-gray-500">{title}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
     </main>

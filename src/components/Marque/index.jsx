@@ -1,4 +1,3 @@
-
 const PartnersMarquee = ({ logos }) => {
   const scrollingLogos = [
     ...logos,
@@ -16,17 +15,7 @@ const PartnersMarquee = ({ logos }) => {
   ];
 
   return (
-    <div className="bg-black py-6 overflow-hidden relative">
-      {/* Left Blur Overlay */}
-      <div className="pointer-events-none absolute top-0 left-0 w-16 h-full z-10 backdrop-blur-sm">
-        <div className="w-full h-full bg-gradient-to-r from-black via-black/30 to-transparent"></div>
-      </div>
-
-      {/* Right Blur Overlay */}
-      <div className="pointer-events-none absolute top-0 right-0 w-16 h-full z-10 backdrop-blur-sm">
-        <div className="w-full h-full bg-gradient-to-l from-black via-black/30 to-transparent"></div>
-      </div>
-
+    <div className=" py-6 overflow-hidden relative ">
       {/* Marquee Content */}
       <div className="animate-marquee whitespace-nowrap flex items-center gap-16 px-4">
         {scrollingLogos.map((logo, index) =>
@@ -47,7 +36,7 @@ const PartnersMarquee = ({ logos }) => {
               key={index}
               src={logo.src}
               alt={logo.alt}
-              className="h-10 shrink-0"
+              className="h-8 md:h-8 shrink-0"
             />
           )
         )}

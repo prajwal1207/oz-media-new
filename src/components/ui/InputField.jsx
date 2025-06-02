@@ -13,7 +13,7 @@ const InputField = ({
   return (
     <div className="mb-4">
       {label && (
-        <label className="block text-white font-roboto text-sm mb-2">
+        <label className="block text-black font-roboto font-bold text-[17px] mb-2">
           {label}
         </label>
       )}
@@ -23,7 +23,7 @@ const InputField = ({
         value={value}
         onChange={onChange}
         required={required}
-        className={`w-full bg-transparent border border-gray-200/30 rounded-lg  p-2 text-white placeholder-[#fd4360]/70 focus:outline-none focus:border-[#fd4360] ${className}`}
+        className={`w-full bg-transparent border border-gray-300 rounded-lg p-2 text-black placeholder-black/60 focus:outline-none focus:border-black ${className}`}
         {...props}
       />
     </div>

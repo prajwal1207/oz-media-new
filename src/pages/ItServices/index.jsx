@@ -1,6 +1,59 @@
 import HeroSection from "../../components/common/HeroSection";
 import BlogSection from "../Marketing/BlogSection";
+import FeatureSection from "../Marketing/ContentLayout";
 import TechServices from "./TechServies";
+
+const services = [
+  {
+    id: 1,
+    icon: "/Assets/seo 1 (2).png",
+    title: "WEBSITE DEVELOPMENT",
+    reverse: false,
+    description:
+      "A website is more than just an online space—it’s where brands come to life. Every element, from design to functionality, should create a seamless experience that captivates and converts. With expert craftsmanship and cutting-edge technology, we build websites that don’t just meet expectations—they set new standards.",
+  },
+  {
+    id: 1,
+    icon: "/Assets/social media 1 (2).png",
+    title: "SOFTWARE DEVELOPMENT",
+    reverse: true,
+    description:
+      "We specialize in building robust, scalable software solutions using a variety of cutting-edge technologies. Whether it’s Python, MERN, MEAN, PHP, Java, or mobile app development, our team delivers high-quality, custom-built applications tailored to your business needs. With expertise across multiple languages and frameworks, we create software.",
+  },
+
+  {
+    id: 3,
+    icon: "/Assets/CREATIVE STUDIO 1 (1).png",
+    title: "APP DEVELOPMENT",
+    reverse: false,
+    description:
+      "We build custom, high-performance mobile apps for iOS, Android, and cross-platform platforms. Our team ensures seamless user experiences, fast performance, and secure integrations. From concept to launch, we deliver apps that are reliable, scalable, and designed to meet your business needs. Whether native or hybrid..",
+  },
+  {
+    id: 4,
+    icon: "/Assets/social media 1 (2).png",
+    title: "GRAPHIC DESIGNING",
+    reverse: true,
+    description:
+      "We specialize in building robust, scalable software solutions using a variety of cutting-edge technologies. Whether it’s Python, MERN, MEAN, PHP, Java, or mobile app development, our team delivers high-quality, custom-built applications tailored to your business needs. With expertise across multiple languages and frameworks, we create software.",
+  },
+  {
+    id: 6,
+    icon: "/Assets/social media 1 (2).png",
+    reverse: false,
+    title: "API DEVELOPMENT",
+    description:
+      "We create powerful, secure, and scalable APIs that connect your applications seamlessly. Our expert developers build custom APIs that enable smooth data exchange, enhance functionality, and improve system integrations. Whether you need RESTful or GraphQL APIs, we ensure your API solutions are reliable and future-proof.",
+  },
+  {
+    id: 7,
+    icon: "/Assets/digital advertise 1 (1).png",
+    title: "E-COMMERCE WEB DEVELOPMENT",
+    reverse: true,
+    description:
+      "We create dynamic, user-friendly e-commerce websites that drive sales and deliver seamless shopping experiences. From product catalogs to secure payment integration, our solutions are built for speed, scalability, and success. Whether you need a custom store or a platform like Shopify, WooCommerce, or Magento — we turn your online vision into a high-performing digital storefront.",
+  },
+];
 
 const blogPosts = [
   {
@@ -37,78 +90,146 @@ const blogPosts = [
 
 const ItServicesPage = () => {
   return (
-    <div className="">
-      <HeroSection title="IT Services" subtitle="" url="/Rotate Anti (1).png" />
-     
-      <section className="container mx-auto px-4 flex flex-col md:flex-row items-center gap-10 py-10">
-        <div className="w-full md:w-1/2">
+    <div className="w-full">
+      <HeroSection
+        title="IT Services"
+        leftImg="/Assets/Group.png"
+        rightImg="/Assets/circle (1).png"
+      />
+
+      {/* Intro Section */}
+      <section className="container mx-auto px-4 sm:px-6 lg:px-8 my-20">
+        <h3 className="text-[#073757] font-bold text-3xl sm:text-4xl md:text-5xl mb-4">
+          IT Services
+        </h3>
+        <p className="text-[#000000] font-bold text-xl sm:text-3xl md:text-4xl leading-tight">
+          Innovative IT Services for Seamless <br className="hidden sm:block" />
+          Digital Transformation
+        </p>
+      </section>
+
+      {/* Info & Image Section */}
+      <section className="container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col-reverse md:flex-row items-center gap-10 py-10">
+        <div className="w-full md:w-1/2 mt-6 md:mt-0">
           <img
-            src="/Group 32952.png"
-            alt="Digital Marketing"
-            className="w-full h-[650px] object-contain"
+            src="/Assets/Smart Personal Assistant Ai Illustration 1 (1).png"
+            alt="Digital Transformation"
+            className="w-full h-auto max-h-[500px] md:max-h-[650px] object-contain"
           />
         </div>
 
-        <div className="w-full md:w-1/2 flex flex-col gap-8">
-          <h2 className="text-[#fd4360] font-bold text-2xl mb-2">
-            IT SERVICES
-          </h2>
-
-          <h3 className="text-white font-bold text-4xl md:text-5xl mb-4">
+        <div className="w-full md:w-1/2 flex flex-col gap-6 text-center md:text-left">
+          <h3 className="text-[#073757] font-bold text-3xl sm:text-4xl md:text-5xl">
             Smarter IT, Better Business
           </h3>
 
-          <p className="text-white text-base md:text-xl leading-relaxed">
+          <p className="text-[#151515] text-base sm:text-lg md:text-xl leading-relaxed font-display">
             Don’t just chase vanity metrics — let your brand grow where it truly
             counts. At Your Oz media, we turn clicks into conversions, followers
-            into customers, and campaigns into measurable success..
+            into customers, and campaigns into measurable success.
           </p>
 
-          <p className="text-white text-base md:text-xl leading-relaxed">
+          <p className="text-[#151515] text-base sm:text-lg md:text-xl leading-relaxed font-display">
             Our expertise ensures seamless integration, robust security, and
-            scalable systems to meet your evolving needs
+            scalable systems to meet your evolving needs.
           </p>
 
-          <div className="bg-[#fd4360] p-6 md:p-10 text-white text-lg md:text-2xl font-bold rounded-tr-2xl rounded-bl-2xl shadow-lg">
+          <div className="bg-[#CC9500] p-4 sm:p-6 md:p-10 text-white text-base sm:text-lg md:text-2xl font-bold rounded-tr-2xl rounded-bl-2xl shadow-lg">
             Empowering Growth with Innovative IT Solutions Transforming
             Challenges
           </div>
         </div>
       </section>
-      <section className="py-16 bg-[#000000]">
-        <div className="container mx-auto px-4">
-          <div className="mb-12  ">
-            <h2 className="text-[#fd4360] font-bold text-2xl mb-4">
-              Software Development
-            </h2>
-            <h3 className="text-white font-bold text-5xl mb-6 flex items-center flex-wrap gap-2">
-              Empowering Digital Excellence
-              <img
-                src="/images/icon_shapes_37.svg"
-                alt=""
-                className="mx-6 animate-bounce inline-block"
-              />
-            </h3>
-            <p className="text-white text-xl">
-              At OZ Media Planet, we build more than just software — we create
-              tailored digital solutions that empower businesses to innovate and
-              grow. Our expert team transforms your ideas into powerful,
-              scalable applications designed to streamline operations, enhance
-              user experience, and drive business success. From custom web and
-              mobile applications to enterprise-grade software and cutting-edge
-              technologies, we deliver solutions that are robust, secure, and
-              future-ready. With a focus on quality, performance, and
-              innovation, we ensure your digital products stand out in a
-              competitive market. Partner with us to turn your vision into
-              high-performing software that fuels your business transformation.
-            </p>
-          </div>
-          <TechServices />
+
+      {/* Features */}
+      <section className="py-16 container mx-auto px-4 sm:px-6 lg:px-8">
+        <h1 className="text-[#000000] font-bold text-3xl sm:text-4xl md:text-5xl text-center mb-12">
+          Empowering Digital Excellence
+        </h1>
+        <div className="space-y-16">
+          {services.map((item) => (
+            <FeatureSection
+              key={item.id}
+              title={item.title}
+              reverse={item.reverse}
+              imgSrc={item.icon}
+              description={item.description}
+            />
+          ))}
         </div>
-        <BlogSection blogPosts={blogPosts} />
       </section>
     </div>
   );
 };
+
+// const ItServicesPage = () => {
+//   return (
+//     <div className="">
+//       <HeroSection
+//         title="IT Services"
+//         leftImg="/Assets/Group.png"
+//         rightImg="/Assets/circle (1).png"
+//       />
+
+//       <section className="container mx-auto my-20">
+//         <h3 className="text-[#073757] font-bold text-5xl md:text-5xl mb-4">
+//           IT Services
+//         </h3>
+//         <p className="text-[#000000] font-bold text-5xl md:text-4xl mb-4">
+//           Innovative IT Services for Seamless <br /> Digital Transformation
+//         </p>
+//       </section>
+
+//       <section className="container mx-auto px-4 flex flex-col md:flex-row items-center gap-10 py-10">
+//         <div className="w-full md:w-1/2">
+//           <img
+//             src="/Assets/Smart Personal Assistant Ai Illustration 1 (1).png"
+//             alt="Digital Marketing"
+//             className="w-full h-[650px] object-contain"
+//           />
+//         </div>
+
+//         <div className="w-full md:w-1/2 flex flex-col gap-8">
+//           <h3 className="text-[#073757] font-bold text-5xl md:text-5xl mb-4">
+//             Smarter IT, Better Business
+//           </h3>
+
+//           <p className="text-[#151515] text-base md:text-xl leading-relaxed font-display">
+//             Don’t just chase vanity metrics — let your brand grow where it truly
+//             counts. At Your Oz media, we turn clicks into conversions, followers
+//             into customers, and campaigns into measurable success..
+//           </p>
+
+//           <p className="text-[#151515] text-base md:text-xl leading-relaxed font-display">
+//             Our expertise ensures seamless integration, robust security, and
+//             scalable systems to meet your evolving needs
+//           </p>
+
+//           <div className="bg-[#CC9500] p-6 md:p-10 text-white text-lg md:text-2xl font-bold rounded-tr-2xl rounded-bl-2xl shadow-lg">
+//             Empowering Growth with Innovative IT Solutions Transforming
+//             Challenges
+//           </div>
+//         </div>
+//       </section>
+//       <section className="py-16 container mx-auto">
+//         <h1 className="text-[#000000] font-bold text-5xl md:text-4xl mb-4">
+//           Empowering Digital Excellence
+//         </h1>
+//         {services.map((item) => {
+//           return (
+//             <FeatureSection
+//               key={item.id}
+//               title={item.title}
+//               reverse={item.reverse}
+//               imgSrc={item.icon}
+//               description={item.description}
+//             />
+//           );
+//         })}
+//         {/* <BlogSection blogPosts={blogPosts} /> */}
+//       </section>
+//     </div>
+//   );
+// };
 
 export default ItServicesPage;

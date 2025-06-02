@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import AnimatedToggleIcon from "../../components/AmimatedToggleIcon";
+import AnimatedToggleIcon from "../../components/AmimatedToggleIcon/index";
+import { RiArrowDropDownLine, RiArrowDropUpLine } from "react-icons/ri";
 
 const faqs = [
   {
@@ -30,54 +31,55 @@ const faqs = [
   },
 ];
 
-const FaqSection = () => {
+export default function FaqSection() {
   const [openIndex, setOpenIndex] = useState(null);
 
   const toggleFAQ = (index) => {
-    setOpenIndex((prevIndex) => (prevIndex === index ? null : index));
+    setOpenIndex((prev) => (prev === index ? null : index));
   };
 
   return (
-    <section className=" text-white py-16 px-4 md:px-20">
-      <div className="max-w-7xl mx-auto space-y-6">
-        <p className="text-[#fd4360] text-2xl font-bold text-center">FAQ</p>
-        <h2 className="text-3xl md:text-6xl font-bold text-center mb-10">
-          Got Questions? We’ve Got{" "}
-          <span className="text-[#fd4360]"> Real Answers.</span>
-        </h2>
+    <section className="bg-[#D9A7F4] py-16 px-4">
+      <div className="max-w-4xl mx-auto space-y-6">
+      
 
+        {/* FAQ Items */}
         {faqs.map((faq, index) => {
           const isOpen = openIndex === index;
-
           return (
             <div
               key={index}
-              id={`faq-${index}`}
-              className="border  font-Montserrat  border-[#fd4360]  overflow-hidden transition duration-300"
+              className="rounded-lg bg-[#D9A7F4]  overflow-hidden transition"
             >
+              {/* Question */}
               <button
-                className="w-full flex gap-6 items-center p-6 bg-gray-500/25 hover:bg-[#1a1a1a] transition"
                 onClick={() => toggleFAQ(index)}
+                className="w-full flex items-center justify-between p-5 sm:p-6 hover:bg-[#e6c7f5] transition"
               >
-                   <div
-                  className={`transition-transform duration-300 transform ${
-                    isOpen ? "rotate-180 text-[#fd4360]" : "rotate-0 text-white"
-                  }`}
-                >
-                  <AnimatedToggleIcon isOpen={isOpen} size="text-3xl" />
-                </div>
-                <span className="text-left text-lg md:text-xl font-semibold text-[#fd4360]">
+                <span className="text-black text-base sm:text-lg font-medium">
                   {faq.question}
                 </span>
-             
+                <span
+                  className={`w-8 h-8 flex items-center justify-center rounded-full bg-pink-500 text-white transition-transform duration-300 ${
+                    isOpen ? "rotate-180" : ""
+                  }`}
+                >
+                  <AnimatedToggleIcon
+                    isOpen={isOpen}
+                    size="text-lg"
+                    closeIcon={<RiArrowDropDownLine />}
+                    openIcon={<RiArrowDropUpLine />}
+                  />
+                </span>
               </button>
 
+              {/* Answer */}
               <div
-                className={`transition-all duration-300 overflow-hidden bg-white/5 text-lg md:text-xl text-]]] px-6 ${
+                className={`text-black text-base px-6 overflow-hidden transition-all duration-300 ease-in-out ${
                   isOpen ? "max-h-96 py-4" : "max-h-0 py-0"
                 }`}
               >
-                {faq.answer}
+                <p>{faq.answer}</p>
               </div>
             </div>
           );
@@ -85,6 +87,4 @@ const FaqSection = () => {
       </div>
     </section>
   );
-};
-
-export default FaqSection;
+}

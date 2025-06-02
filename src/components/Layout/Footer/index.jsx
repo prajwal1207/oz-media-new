@@ -33,7 +33,7 @@ const Footer = () => {
   }, [typingIndex, index]);
 
   return (
-    <>
+    <div className="bg-black overflow-hidden">
       {/* Top Section */}
       <section className="py-10 container mx-auto relative flex flex-col md:flex-row justify-between items-center gap-6">
         <div className="text-center md:text-left">
@@ -51,7 +51,7 @@ const Footer = () => {
           </motion.p>
         </div>
         <a href="/contact">
-          <button className="border-2 rounded-full border-[#fd4360] text-white px-8 sm:px-16 py-3 sm:py-4 text-base sm:text-lg hover:bg-[#fd4360] transition-all duration-300">
+          <button className="border-2 rounded-full border-[#FCC735] text-white px-8 sm:px-16 py-3 sm:py-4 text-base sm:text-lg hover:bg-[#FCC735] transition-all duration-300">
             Sign Up
           </button>
         </a>
@@ -61,13 +61,16 @@ const Footer = () => {
       <div className="container mx-auto w-full h-[1px] bg-[#fd4360] my-10" />
 
       {/* Footer Section */}
-      <footer className="text-white container mx-auto relative pb-10">
+      <footer className="text-white container mx-auto relative pb-10 overflow-hidden  ">
+        {/* Centered Background Image */}
         <img
           src="/images/img_abstractgeometricseamlesspatterns2zqt82c_2.png"
           alt=""
-          className="absolute h-60 sm:h-72 md:h-96 left-0 md:left-80 pointer-events-none -z-10 opacity-20"
+          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 h-60 sm:h-72 md:h-96 opacity-20 pointer-events-none z-0"
         />
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
+
+        {/* Footer Content */}
+        <div className="relative z-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
           {/* About Section */}
           <div>
             <h3 className="text-xl sm:text-2xl font-semibold mb-3 text-[#fd4360]">
@@ -122,14 +125,6 @@ const Footer = () => {
           <div>
             <h3 className="text-xl sm:text-2xl font-semibold mb-3">Services</h3>
             <ul className="space-y-2 text-base text-gray-400">
-              {/* <li>
-                <Link
-                  to="/our-teams"
-                  className="hover:text-white transition"
-                >
-                  Our Teams
-                </Link>
-              </li> */}
               <li>
                 <Link
                   to="/digital-marketing"
@@ -146,7 +141,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Oz Internationals */}
+          {/* Subdomain */}
           <div>
             <h3 className="text-xl sm:text-2xl font-semibold mb-3">
               Subdomain
@@ -171,7 +166,7 @@ const Footer = () => {
           </div>
         </div>
       </footer>
-    </>
+    </div>
   );
 };
 

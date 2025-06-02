@@ -1,26 +1,48 @@
 import React from "react";
 
-const HeroSection = ({ title, subtitle, url }) => {
+const HeroSection = ({ title, leftImg, rightImg }) => {
   return (
-    <div className="relative h-[200px] md:h-[600px] overflow-hidden bg-[#36363633] ">
-      {/* Background image */}
-      <img
-        src={url}
-        alt="Background"
-        className="absolute inset-0 w-full  h-full object-contain z-0   animate-spin-slow "
-      />
+    <section className="bg-[#D7D7E2] overflow-hidden">
+      <div
+        className="
+          relative flex flex-col-reverse md:flex-row
+          items-center justify-between
+          h-[300px] sm:h-[400px] md:h-[600px]
+          px-4 md:px-16
+        "
+      >
+        {/* Left illustration */}
+        <div className="w-full md:w-1/2 flex justify-center md:justify-start z-10 mt-4 md:mt-0">
+          <img
+            src={leftImg}
+            alt="Illustration"
+            className="w-auto h-full max-h-full object-contain"
+          />
+        </div>
 
-      {/* Overlay and content */}
-      <div className="absolute inset-0 bg-black/60 z-10 flex items-center justify-center px-4 md:px-16">
-        <div className="text-center">
-          <h1 className="font-montserrat leading-tight font-bold text-5xl mb-4 bg-gradient-to-b from-[#FFFFFF] to-[#2b2a2a] bg-clip-text text-transparent">
+        {/* Right decorative + title overlay */}
+        <div className="w-full md:w-1/2 flex justify-center md:justify-end z-10 relative">
+          {/* Title */}
+          <h1
+            className="
+              absolute inset-0 flex items-center justify-center
+              px-4 text-3xl sm:text-4xl md:text-6xl
+              bg-gradient-to-r from-[#073757] to-[#01154B]
+              bg-clip-text text-transparent
+            "
+          >
             {title}
           </h1>
 
-          <p className="text-white font-roboto text-base">{subtitle}</p>
+          {/* Decorative image */}
+          <img
+            src={rightImg}
+            alt="Decorative"
+            className="w-auto h-full -z-10  max-h-full object-contain animate-spin-slow"
+          />
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

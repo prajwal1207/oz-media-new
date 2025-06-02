@@ -7,7 +7,7 @@ const AnimatedToggleIcon = ({
   closeIcon = <FaPlus />,
   size = "text-xl",
   openColor = "text-red-500",
-  closeColor = "text-gray-500",
+  closeColor = "text-white",
   onClick,
 }) => {
   console.log(isOpen);
